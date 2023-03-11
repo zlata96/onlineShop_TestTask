@@ -4,7 +4,6 @@
 //  Created by Zlata Guseva on 10.03.2023.
 
 import UIKit
-import SnapKit
 
 class TextFieldView: UIView {
     var placeholder: String
@@ -12,13 +11,13 @@ class TextFieldView: UIView {
 
     lazy var textField: UITextField = {
         let textField = UITextField()
-        //textField.font = .bodyRegular
+        textField.font = .regular10
         textField.placeholder = placeholder
+        textField.textAlignment = .center
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
             attributes: [.foregroundColor: UIColor.textFieldText]
         )
-        textField.layer.cornerRadius = 15
         return textField
     }()
 
@@ -49,6 +48,7 @@ class TextFieldView: UIView {
 
     private func setupStyle() {
         backgroundColor = .textFieldBackground
+        layer.cornerRadius = 15
     }
 
     private func addSubviews() {
