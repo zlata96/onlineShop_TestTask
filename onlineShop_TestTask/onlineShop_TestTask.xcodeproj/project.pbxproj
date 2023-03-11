@@ -10,11 +10,18 @@
 		CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC196629BB6BA9000FF930 /* AppDelegate.swift */; };
 		CEEC197029BB6BB0000FF930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEC196F29BB6BB0000FF930 /* Assets.xcassets */; };
 		CEEC197329BB6BB0000FF930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */; };
-		CEEC197B29BB73D6000FF930 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197A29BB73D6000FF930 /* FirstViewController.swift */; };
-		CEEC197D29BB7AAA000FF930 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197C29BB7AAA000FF930 /* SignInView.swift */; };
+		CEEC197B29BB73D6000FF930 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197A29BB73D6000FF930 /* LogInViewController.swift */; };
+		CEEC197D29BB7AAA000FF930 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197C29BB7AAA000FF930 /* LogInView.swift */; };
 		CEEC197F29BB7D0A000FF930 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */; };
 		CEEC198129BB8173000FF930 /* Colors+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC198029BB8173000FF930 /* Colors+extension.swift */; };
 		CEEC198429BB831A000FF930 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEEC198329BB831A000FF930 /* SnapKit */; };
+		CEEC198A29BCF88D000FF930 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEEC198929BCF88D000FF930 /* Montserrat-Italic-VariableFont_wght.ttf */; };
+		CEEC198C29BCF897000FF930 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEEC198B29BCF897000FF930 /* Montserrat-VariableFont_wght.ttf */; };
+		CEEC198F29BCF9CE000FF930 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC198E29BCF9CE000FF930 /* Fonts.swift */; };
+		CEEC199329BCFE3C000FF930 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199229BCFE3B000FF930 /* SignInView.swift */; };
+		CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199429BCFE48000FF930 /* SignInViewController.swift */; };
+		CEEC199729BD0459000FF930 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199629BD0459000FF930 /* UIButton+extension.swift */; };
+		CEEC199929BD08BF000FF930 /* SignInWithView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199829BD08BF000FF930 /* SignInWithView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +30,17 @@
 		CEEC196F29BB6BB0000FF930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEEC197229BB6BB0000FF930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEEC197429BB6BB0000FF930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEEC197A29BB73D6000FF930 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CEEC197C29BB7AAA000FF930 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CEEC197A29BB73D6000FF930 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		CEEC197C29BB7AAA000FF930 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		CEEC198029BB8173000FF930 /* Colors+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+extension.swift"; sourceTree = "<group>"; };
+		CEEC198929BCF88D000FF930 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		CEEC198B29BCF897000FF930 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		CEEC198E29BCF9CE000FF930 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		CEEC199229BCFE3B000FF930 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CEEC199429BCFE48000FF930 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CEEC199629BD0459000FF930 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
+		CEEC199829BD08BF000FF930 /* SignInWithView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +76,9 @@
 			children = (
 				CEEC198629BCECC7000FF930 /* Helpers */,
 				CEEC198529BCECA7000FF930 /* UIElements */,
-				CEEC197C29BB7AAA000FF930 /* SignInView.swift */,
+				CEEC199129BCFE16000FF930 /* Signin */,
+				CEEC199029BCFE0B000FF930 /* Login */,
 				CEEC196629BB6BA9000FF930 /* AppDelegate.swift */,
-				CEEC197A29BB73D6000FF930 /* FirstViewController.swift */,
 				CEEC196F29BB6BB0000FF930 /* Assets.xcassets */,
 				CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */,
 				CEEC197429BB6BB0000FF930 /* Info.plist */,
@@ -76,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */,
+				CEEC199829BD08BF000FF930 /* SignInWithView.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -83,6 +98,8 @@
 		CEEC198629BCECC7000FF930 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CEEC198829BCF729000FF930 /* Fonts */,
+				CEEC198D29BCF9B4000FF930 /* Constants */,
 				CEEC198729BCECD6000FF930 /* Extensions */,
 			);
 			path = Helpers;
@@ -92,8 +109,44 @@
 			isa = PBXGroup;
 			children = (
 				CEEC198029BB8173000FF930 /* Colors+extension.swift */,
+				CEEC199629BD0459000FF930 /* UIButton+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEEC198829BCF729000FF930 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC198929BCF88D000FF930 /* Montserrat-Italic-VariableFont_wght.ttf */,
+				CEEC198B29BCF897000FF930 /* Montserrat-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CEEC198D29BCF9B4000FF930 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC198E29BCF9CE000FF930 /* Fonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CEEC199029BCFE0B000FF930 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC197A29BB73D6000FF930 /* LogInViewController.swift */,
+				CEEC197C29BB7AAA000FF930 /* LogInView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CEEC199129BCFE16000FF930 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC199229BCFE3B000FF930 /* SignInView.swift */,
+				CEEC199429BCFE48000FF930 /* SignInViewController.swift */,
+			);
+			path = Signin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEC198C29BCF897000FF930 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				CEEC197329BB6BB0000FF930 /* LaunchScreen.storyboard in Resources */,
+				CEEC198A29BCF88D000FF930 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
 				CEEC197029BB6BB0000FF930 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,11 +227,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEC197D29BB7AAA000FF930 /* SignInView.swift in Sources */,
+				CEEC197D29BB7AAA000FF930 /* LogInView.swift in Sources */,
 				CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */,
+				CEEC199929BD08BF000FF930 /* SignInWithView.swift in Sources */,
 				CEEC197F29BB7D0A000FF930 /* TextFieldView.swift in Sources */,
-				CEEC197B29BB73D6000FF930 /* FirstViewController.swift in Sources */,
+				CEEC197B29BB73D6000FF930 /* LogInViewController.swift in Sources */,
+				CEEC198F29BCF9CE000FF930 /* Fonts.swift in Sources */,
+				CEEC199329BCFE3C000FF930 /* SignInView.swift in Sources */,
+				CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */,
 				CEEC198129BB8173000FF930 /* Colors+extension.swift in Sources */,
+				CEEC199729BD0459000FF930 /* UIButton+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +378,7 @@
 				DEVELOPMENT_TEAM = B7MDH9MJ6R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = onlineShop_TestTask/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -348,6 +409,7 @@
 				DEVELOPMENT_TEAM = B7MDH9MJ6R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = onlineShop_TestTask/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
