@@ -6,5 +6,10 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    private var signInView = SignInView()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view = signInView
+    }
 }
