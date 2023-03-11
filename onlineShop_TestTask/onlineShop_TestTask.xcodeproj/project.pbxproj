@@ -12,6 +12,9 @@
 		CEEC197329BB6BB0000FF930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */; };
 		CEEC197B29BB73D6000FF930 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197A29BB73D6000FF930 /* FirstViewController.swift */; };
 		CEEC197D29BB7AAA000FF930 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197C29BB7AAA000FF930 /* SignInView.swift */; };
+		CEEC197F29BB7D0A000FF930 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */; };
+		CEEC198129BB8173000FF930 /* Colors+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC198029BB8173000FF930 /* Colors+extension.swift */; };
+		CEEC198429BB831A000FF930 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEEC198329BB831A000FF930 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,8 @@
 		CEEC197429BB6BB0000FF930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEEC197A29BB73D6000FF930 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		CEEC197C29BB7AAA000FF930 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		CEEC198029BB8173000FF930 /* Colors+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEC198429BB831A000FF930 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 		CEEC196529BB6BA9000FF930 /* onlineShop_TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				CEEC198629BCECC7000FF930 /* Helpers */,
+				CEEC198529BCECA7000FF930 /* UIElements */,
 				CEEC197C29BB7AAA000FF930 /* SignInView.swift */,
 				CEEC196629BB6BA9000FF930 /* AppDelegate.swift */,
 				CEEC197A29BB73D6000FF930 /* FirstViewController.swift */,
@@ -62,6 +70,30 @@
 				CEEC197429BB6BB0000FF930 /* Info.plist */,
 			);
 			path = onlineShop_TestTask;
+			sourceTree = "<group>";
+		};
+		CEEC198529BCECA7000FF930 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		CEEC198629BCECC7000FF930 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC198729BCECD6000FF930 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEEC198729BCECD6000FF930 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC198029BB8173000FF930 /* Colors+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +112,9 @@
 			dependencies = (
 			);
 			name = onlineShop_TestTask;
+			packageProductDependencies = (
+				CEEC198329BB831A000FF930 /* SnapKit */,
+			);
 			productName = onlineShop_TestTask;
 			productReference = CEEC196329BB6BA9000FF930 /* onlineShop_TestTask.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +143,9 @@
 				Base,
 			);
 			mainGroup = CEEC195A29BB6BA9000FF930;
+			packageReferences = (
+				CEEC198229BB831A000FF930 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CEEC196429BB6BA9000FF930 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,7 +174,9 @@
 			files = (
 				CEEC197D29BB7AAA000FF930 /* SignInView.swift in Sources */,
 				CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */,
+				CEEC197F29BB7D0A000FF930 /* TextFieldView.swift in Sources */,
 				CEEC197B29BB73D6000FF930 /* FirstViewController.swift in Sources */,
+				CEEC198129BB8173000FF930 /* Colors+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEEC198229BB831A000FF930 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEEC198329BB831A000FF930 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEEC198229BB831A000FF930 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEEC195B29BB6BA9000FF930 /* Project object */;
 }
