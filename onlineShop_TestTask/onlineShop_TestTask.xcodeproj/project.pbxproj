@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEE56BAE29C0BE1D00A9C92E /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */; };
 		CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC196629BB6BA9000FF930 /* AppDelegate.swift */; };
 		CEEC197029BB6BB0000FF930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEC196F29BB6BB0000FF930 /* Assets.xcassets */; };
 		CEEC197329BB6BB0000FF930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */; };
@@ -22,9 +23,14 @@
 		CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199429BCFE48000FF930 /* SignInViewController.swift */; };
 		CEEC199729BD0459000FF930 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199629BD0459000FF930 /* UIButton+extension.swift */; };
 		CEEC199929BD08BF000FF930 /* SignInWithView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199829BD08BF000FF930 /* SignInWithView.swift */; };
+		CEEC199B29BF4C4C000FF930 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199A29BF4C4C000FF930 /* NavigationViewController.swift */; };
+		CEEC199E29BF50D7000FF930 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199D29BF50D7000FF930 /* ProfileView.swift */; };
+		CEEC19A029BF50E6000FF930 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */; };
+		CEEC19A229BF5164000FF930 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC19A129BF5164000FF930 /* ProfileCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		CEEC196329BB6BA9000FF930 /* onlineShop_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onlineShop_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEC196629BB6BA9000FF930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEC196F29BB6BB0000FF930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +47,10 @@
 		CEEC199429BCFE48000FF930 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CEEC199629BD0459000FF930 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		CEEC199829BD08BF000FF930 /* SignInWithView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithView.swift; sourceTree = "<group>"; };
+		CEEC199A29BF4C4C000FF930 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		CEEC199D29BF50D7000FF930 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEEC19A129BF5164000FF930 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +86,12 @@
 			children = (
 				CEEC198629BCECC7000FF930 /* Helpers */,
 				CEEC198529BCECA7000FF930 /* UIElements */,
+				CEEC199C29BF508B000FF930 /* Profile */,
 				CEEC199129BCFE16000FF930 /* Signin */,
 				CEEC199029BCFE0B000FF930 /* Login */,
 				CEEC196629BB6BA9000FF930 /* AppDelegate.swift */,
 				CEEC196F29BB6BB0000FF930 /* Assets.xcassets */,
+				CEEC199A29BF4C4C000FF930 /* NavigationViewController.swift */,
 				CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */,
 				CEEC197429BB6BB0000FF930 /* Info.plist */,
 			);
@@ -109,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEC198029BB8173000FF930 /* Colors+extension.swift */,
+				CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */,
 				CEEC199629BD0459000FF930 /* UIButton+extension.swift */,
 			);
 			path = Extensions;
@@ -147,6 +160,16 @@
 				CEEC199429BCFE48000FF930 /* SignInViewController.swift */,
 			);
 			path = Signin;
+			sourceTree = "<group>";
+		};
+		CEEC199C29BF508B000FF930 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC199D29BF50D7000FF930 /* ProfileView.swift */,
+				CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */,
+				CEEC19A129BF5164000FF930 /* ProfileCell.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,15 +251,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEC197D29BB7AAA000FF930 /* LogInView.swift in Sources */,
+				CEEC199B29BF4C4C000FF930 /* NavigationViewController.swift in Sources */,
 				CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */,
 				CEEC199929BD08BF000FF930 /* SignInWithView.swift in Sources */,
+				CEEC199E29BF50D7000FF930 /* ProfileView.swift in Sources */,
 				CEEC197F29BB7D0A000FF930 /* TextFieldView.swift in Sources */,
 				CEEC197B29BB73D6000FF930 /* LogInViewController.swift in Sources */,
 				CEEC198F29BCF9CE000FF930 /* Fonts.swift in Sources */,
 				CEEC199329BCFE3C000FF930 /* SignInView.swift in Sources */,
 				CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */,
+				CEEC19A029BF50E6000FF930 /* ProfileViewController.swift in Sources */,
 				CEEC198129BB8173000FF930 /* Colors+extension.swift in Sources */,
+				CEE56BAE29C0BE1D00A9C92E /* UITableView+extension.swift in Sources */,
 				CEEC199729BD0459000FF930 /* UIButton+extension.swift in Sources */,
+				CEEC19A229BF5164000FF930 /* ProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
