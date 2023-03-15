@@ -74,7 +74,7 @@ class LogInView: UIView {
         }
 
         loginButton.snp.makeConstraints { make in
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).inset(24)
+            make.top.equalTo(passwordInputView.snp.bottom).inset(35)
             make.leading.trailing.equalToSuperview().inset(43)
             make.height.equalTo(46)
         }
@@ -90,13 +90,4 @@ class LogInView: UIView {
 //            for: UIControl.Event.editingChanged
 //        )
     }
-
-//    @objc func textFieldDidChange(_: UITextField) {
-//        addButton.backgroundColor = nameInputView.textField.isValid && !frequencyView.selectedFrequencies.isEmpty
-//            ? Colors.buttonActive.color
-//            : Colors.buttonInactive.color
-//        addButton.titleLabel?.textColor = nameInputView.textField.isValid && !frequencyView.selectedFrequencies.isEmpty
-//            ? Colors.textButton.color
-//            : Colors.textSecondary.color
-//    }
 }
