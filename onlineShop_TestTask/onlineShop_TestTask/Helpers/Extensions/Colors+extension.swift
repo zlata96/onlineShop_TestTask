@@ -14,4 +14,7 @@ extension UIColor {
     static let mainText = UIColor(named: "mainText")
     static let textFieldBackground = UIColor(named: "textFieldBackground")
     static let textFieldText = UIColor(named: "textFieldText")
+    static let profileCycleBackground = UIColor(named: "profileCycleBackground")
+    static let profileBackground = UIColor(named: "profileBackground")
+    static let subTitle = UIColor(named: "subTitle")
 }
