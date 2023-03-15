@@ -13,5 +13,16 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = signInView
+        addTargets()
+    }
+
+    private func addTargets() {
+        signInView.alreadyLoginButton.addTarget(self, action: #selector(goToLogInnViewController), for: .touchUpInside)
+    }
+
+    @objc
+    private func goToLogInnViewController() {
+        let logInnViewController = NavigationController(rootViewController: LogInViewController())
+        self.present(logInnViewController, animated: true)
     }
 }
