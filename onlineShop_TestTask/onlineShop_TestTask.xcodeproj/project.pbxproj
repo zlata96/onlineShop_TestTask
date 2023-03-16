@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CEE56BAE29C0BE1D00A9C92E /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */; };
+		CEE56BB029C1C6BE00A9C92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */; };
+		CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */; };
+		CEE56BB529C1CED000A9C92E /* OtherViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB429C1CED000A9C92E /* OtherViewControllers.swift */; };
+		CEE56BBA29C304DD00A9C92E /* ProfileItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */; };
 		CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC196629BB6BA9000FF930 /* AppDelegate.swift */; };
 		CEEC197029BB6BB0000FF930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEC196F29BB6BB0000FF930 /* Assets.xcassets */; };
 		CEEC197329BB6BB0000FF930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */; };
@@ -31,6 +35,10 @@
 
 /* Begin PBXFileReference section */
 		CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEE56BB429C1CED000A9C92E /* OtherViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewControllers.swift; sourceTree = "<group>"; };
+		CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemsViewModel.swift; sourceTree = "<group>"; };
 		CEEC196329BB6BA9000FF930 /* onlineShop_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onlineShop_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEC196629BB6BA9000FF930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEC196F29BB6BB0000FF930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEE56BB129C1CAF100A9C92E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */,
+				CEE56BB429C1CED000A9C92E /* OtherViewControllers.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CEE56BB829C304AE00A9C92E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CEEC195A29BB6BA9000FF930 = {
 			isa = PBXGroup;
 			children = (
@@ -84,12 +109,14 @@
 		CEEC196529BB6BA9000FF930 /* onlineShop_TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				CEE56BB129C1CAF100A9C92E /* Home */,
 				CEEC198629BCECC7000FF930 /* Helpers */,
 				CEEC198529BCECA7000FF930 /* UIElements */,
 				CEEC199C29BF508B000FF930 /* Profile */,
 				CEEC199129BCFE16000FF930 /* Signin */,
 				CEEC199029BCFE0B000FF930 /* Login */,
 				CEEC196629BB6BA9000FF930 /* AppDelegate.swift */,
+				CEE56BB829C304AE00A9C92E /* Model */,
 				CEEC196F29BB6BB0000FF930 /* Assets.xcassets */,
 				CEEC199A29BF4C4C000FF930 /* NavigationViewController.swift */,
 				CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */,
@@ -102,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */,
+				CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */,
 				CEEC199829BD08BF000FF930 /* SignInWithView.swift */,
 			);
 			path = UIElements;
@@ -182,6 +210,8 @@
 				CEEC195F29BB6BA9000FF930 /* Sources */,
 				CEEC196029BB6BA9000FF930 /* Frameworks */,
 				CEEC196129BB6BA9000FF930 /* Resources */,
+				CEE56BB629C2194400A9C92E /* SwiftFormat */,
+				CEE56BB729C2195E00A9C92E /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -245,13 +275,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CEE56BB629C2194400A9C92E /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+		CEE56BB729C2195E00A9C92E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CEEC195F29BB6BA9000FF930 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CEEC197D29BB7AAA000FF930 /* LogInView.swift in Sources */,
+				CEE56BB029C1C6BE00A9C92E /* TabBarController.swift in Sources */,
 				CEEC199B29BF4C4C000FF930 /* NavigationViewController.swift in Sources */,
+				CEE56BBA29C304DD00A9C92E /* ProfileItemsViewModel.swift in Sources */,
+				CEE56BB529C1CED000A9C92E /* OtherViewControllers.swift in Sources */,
+				CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */,
 				CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */,
 				CEEC199929BD08BF000FF930 /* SignInWithView.swift in Sources */,
 				CEEC199E29BF50D7000FF930 /* ProfileView.swift in Sources */,
