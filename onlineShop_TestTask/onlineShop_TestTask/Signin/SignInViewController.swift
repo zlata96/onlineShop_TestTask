@@ -1,9 +1,5 @@
-//
-//  SignInViewController.swift.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 11.03.2023.
-//
+// SignInViewController.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 
@@ -23,6 +19,6 @@ class SignInViewController: UIViewController {
     @objc
     private func goToLogInnViewController() {
         let logInnViewController = NavigationController(rootViewController: LogInViewController())
-        self.present(logInnViewController, animated: true)
+        present(logInnViewController, animated: true)
     }
 }

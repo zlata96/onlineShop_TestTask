@@ -1,7 +1,5 @@
-//  UITableView+extension.swift
-//  onlineShop_TestTask
-//
-//  Created by ZLata Guseva on 14.03.2023.
+// UITableView+extension.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 

@@ -1,10 +1,8 @@
-//  SignInWithView.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 11.03.2023.
+// SignInWithView.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
-import UIKit
 import SnapKit
+import UIKit
 
 class SignInWithView: UIView {
     var text: String

@@ -1,7 +1,5 @@
-//  ProfileView.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 13.03.2023.
+// ProfileView.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 

@@ -1,9 +1,5 @@
-//
-//  Colors+extension.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 10.03.2023.
-//
+// Colors+extension.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 

@@ -1,9 +1,5 @@
-//
-//  Fonts.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 11.03.2023.
-//
+// Fonts.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 

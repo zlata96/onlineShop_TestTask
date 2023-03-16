@@ -1,7 +1,5 @@
-//  SignInView.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 11.03.2023.
+// SignInView.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 
@@ -13,6 +11,7 @@ class SignInView: UIView {
         label.font = .bold26
         return label
     }()
+
     var firstNameInputView = TextFieldView(placeholder: "First name", haveImage: true)
     var lastNameInputView = TextFieldView(placeholder: "Last name", haveImage: true)
     var emailInputView = TextFieldView(placeholder: "Email", haveImage: true)
