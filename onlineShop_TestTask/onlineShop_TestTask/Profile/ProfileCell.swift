@@ -1,7 +1,5 @@
-//  ProfileCell.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 13.03.2023.
+// ProfileCell.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 
@@ -15,17 +13,18 @@ protocol Configurable where Self: UIView {
     func configure(with viewModel: ViewModel)
 }
 
-class ProfileCell: UITableViewCell {
-    enum ProfileCellState {
-        case pointer
-        case text(value: String)
-        case non
-    }
+enum ProfileCellState {
+    case pointer
+    case text(value: String)
+    case none
+}
 
-    private lazy var iconImageView: UIImageView = {
+class ProfileCell: UITableViewCell {
+    lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .profileCycleBackground
         imageView.layer.cornerRadius = 20
+        imageView.contentMode = .center
         return imageView
     }()
 
@@ -36,16 +35,16 @@ class ProfileCell: UITableViewCell {
         return label
     }()
 
-    private var rightPointer: UIImageView = {
+    var rightPointer: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "rightPointer")
         image.tintColor = .mainText
         return image
     }()
 
-    private var balanceLabel: UILabel = {
+    var balanceLabel: UILabel = {
         let label = UILabel()
-        label.font = .regular10
+        label.font = .regular12
         label.textColor = .mainText
         label.isHidden = true
         return label
@@ -80,10 +79,6 @@ class ProfileCell: UITableViewCell {
     }
 
     private func makeConstraints() {
-//        contentView.snp.makeConstraints { make in
-//            make.top.bottom.trailing.leading.equalToSuperview()
-//        }
-
         iconImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(32)
             make.centerY.equalToSuperview()
@@ -106,6 +101,21 @@ class ProfileCell: UITableViewCell {
             make.trailing.equalToSuperview().inset(44)
             make.centerY.equalToSuperview()
             make.top.bottom.equalToSuperview().inset(10)
+        }
+    }
+}
+
+extension ProfileCell: Configurable {
+    func configure(with viewModel: ProfileCellViewModel) {
+        profileItemLabel.text = viewModel.name
+        iconImageView.image = viewModel.iconImage
+        switch viewModel.state {
+        case .none:
+            rightPointer.isHidden = true; balanceLabel.isHidden = true
+        case let .text(value):
+            rightPointer.isHidden = true; balanceLabel.isHidden = false; balanceLabel.text = value
+        case .pointer:
+            rightPointer.isHidden = false; balanceLabel.isHidden = true
         }
     }
 }

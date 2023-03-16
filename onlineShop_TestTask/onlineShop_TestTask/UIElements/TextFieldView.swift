@@ -1,7 +1,5 @@
-//  TextFieldView.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 10.03.2023.
+// TextFieldView.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 
@@ -16,7 +14,7 @@ class TextFieldView: UIView {
         textField.textAlignment = .center
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [.foregroundColor: UIColor.textFieldText]
+            attributes: [.foregroundColor: UIColor.textFieldText ?? .clear]
         )
         return textField
     }()
@@ -58,11 +56,9 @@ class TextFieldView: UIView {
 
     private func makeConstraints() {
         textField.snp.makeConstraints { make in
-            //make.height.equalTo(30)
             make.top.leading.trailing.bottom.equalToSuperview()
         }
         passwordImage.snp.makeConstraints { make in
-            //make.height.equalTo(15)
             make.trailing.equalTo(textField.snp.trailing).inset(15)
             make.top.bottom.equalToSuperview().inset(7)
         }

@@ -1,13 +1,10 @@
-//  AppDelegate.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata Guseva on 10.03.2023.
+// AppDelegate.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -17,8 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setupRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = NavigationController(rootViewController: ProfileViewController())
+        window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
     }
 }
-
