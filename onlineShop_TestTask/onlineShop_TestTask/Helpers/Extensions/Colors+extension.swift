@@ -13,4 +13,6 @@ extension UIColor {
     static let profileCycleBackground = UIColor(named: "profileCycleBackground")
     static let profileBackground = UIColor(named: "profileBackground")
     static let subTitle = UIColor(named: "subTitle")
+    static let selectedTabBarItem = UIColor(named: "selectedTabBarItem")
+    static let searchBarBackground = UIColor(named: "searchBarBackground")
 }
