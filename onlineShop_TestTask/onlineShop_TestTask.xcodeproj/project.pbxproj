@@ -12,6 +12,13 @@
 		CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */; };
 		CEE56BB529C1CED000A9C92E /* OtherViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB429C1CED000A9C92E /* OtherViewControllers.swift */; };
 		CEE56BBA29C304DD00A9C92E /* ProfileItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */; };
+		CEE56BBF29C34D6900A9C92E /* BlueButton .swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BBE29C34D6900A9C92E /* BlueButton .swift */; };
+		CEE56BC129C3543E00A9C92E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BC029C3543E00A9C92E /* NavigationController.swift */; };
+		CEE56BC329C355F800A9C92E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BC229C355F800A9C92E /* HomeView.swift */; };
+		CEE56BC529C356BD00A9C92E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BC429C356BD00A9C92E /* ProductCollectionViewCell.swift */; };
+		CEE56BC729C47F9D00A9C92E /* ProductCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BC629C47F9D00A9C92E /* ProductCategoryView.swift */; };
+		CEE56BCA29C4983800A9C92E /* ProductCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BC929C4983800A9C92E /* ProductCategoriesCollectionViewCell.swift */; };
+		CEE56BCC29C4CB0500A9C92E /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BCB29C4CB0500A9C92E /* UICollectionView+extension.swift */; };
 		CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC196629BB6BA9000FF930 /* AppDelegate.swift */; };
 		CEEC197029BB6BB0000FF930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEC196F29BB6BB0000FF930 /* Assets.xcassets */; };
 		CEEC197329BB6BB0000FF930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */; };
@@ -27,7 +34,6 @@
 		CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199429BCFE48000FF930 /* SignInViewController.swift */; };
 		CEEC199729BD0459000FF930 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199629BD0459000FF930 /* UIButton+extension.swift */; };
 		CEEC199929BD08BF000FF930 /* SignInWithView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199829BD08BF000FF930 /* SignInWithView.swift */; };
-		CEEC199B29BF4C4C000FF930 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199A29BF4C4C000FF930 /* NavigationViewController.swift */; };
 		CEEC199E29BF50D7000FF930 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199D29BF50D7000FF930 /* ProfileView.swift */; };
 		CEEC19A029BF50E6000FF930 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */; };
 		CEEC19A229BF5164000FF930 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC19A129BF5164000FF930 /* ProfileCell.swift */; };
@@ -39,6 +45,13 @@
 		CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEE56BB429C1CED000A9C92E /* OtherViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewControllers.swift; sourceTree = "<group>"; };
 		CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemsViewModel.swift; sourceTree = "<group>"; };
+		CEE56BBE29C34D6900A9C92E /* BlueButton .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlueButton .swift"; sourceTree = "<group>"; };
+		CEE56BC029C3543E00A9C92E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CEE56BC229C355F800A9C92E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CEE56BC429C356BD00A9C92E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEE56BC629C47F9D00A9C92E /* ProductCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryView.swift; sourceTree = "<group>"; };
+		CEE56BC929C4983800A9C92E /* ProductCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEE56BCB29C4CB0500A9C92E /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
 		CEEC196329BB6BA9000FF930 /* onlineShop_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onlineShop_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEC196629BB6BA9000FF930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEC196F29BB6BB0000FF930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,7 +68,6 @@
 		CEEC199429BCFE48000FF930 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CEEC199629BD0459000FF930 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		CEEC199829BD08BF000FF930 /* SignInWithView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithView.swift; sourceTree = "<group>"; };
-		CEEC199A29BF4C4C000FF930 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		CEEC199D29BF50D7000FF930 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CEEC19A129BF5164000FF930 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -77,6 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */,
+				CEE56BC229C355F800A9C92E /* HomeView.swift */,
+				CEE56BC929C4983800A9C92E /* ProductCategoriesCollectionViewCell.swift */,
+				CEE56BC829C4980600A9C92E /* ProductItems */,
 				CEE56BB429C1CED000A9C92E /* OtherViewControllers.swift */,
 			);
 			path = Home;
@@ -88,6 +103,15 @@
 				CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEE56BC829C4980600A9C92E /* ProductItems */ = {
+			isa = PBXGroup;
+			children = (
+				CEE56BC429C356BD00A9C92E /* ProductCollectionViewCell.swift */,
+				CEE56BC629C47F9D00A9C92E /* ProductCategoryView.swift */,
+			);
+			path = ProductItems;
 			sourceTree = "<group>";
 		};
 		CEEC195A29BB6BA9000FF930 = {
@@ -115,10 +139,9 @@
 				CEEC199C29BF508B000FF930 /* Profile */,
 				CEEC199129BCFE16000FF930 /* Signin */,
 				CEEC199029BCFE0B000FF930 /* Login */,
-				CEEC196629BB6BA9000FF930 /* AppDelegate.swift */,
 				CEE56BB829C304AE00A9C92E /* Model */,
 				CEEC196F29BB6BB0000FF930 /* Assets.xcassets */,
-				CEEC199A29BF4C4C000FF930 /* NavigationViewController.swift */,
+				CEEC196629BB6BA9000FF930 /* AppDelegate.swift */,
 				CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */,
 				CEEC197429BB6BB0000FF930 /* Info.plist */,
 			);
@@ -131,6 +154,8 @@
 				CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */,
 				CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */,
 				CEEC199829BD08BF000FF930 /* SignInWithView.swift */,
+				CEE56BBE29C34D6900A9C92E /* BlueButton .swift */,
+				CEE56BC029C3543E00A9C92E /* NavigationController.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -150,6 +175,7 @@
 			children = (
 				CEEC198029BB8173000FF930 /* Colors+extension.swift */,
 				CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */,
+				CEE56BCB29C4CB0500A9C92E /* UICollectionView+extension.swift */,
 				CEEC199629BD0459000FF930 /* UIButton+extension.swift */,
 			);
 			path = Extensions;
@@ -211,7 +237,7 @@
 				CEEC196029BB6BA9000FF930 /* Frameworks */,
 				CEEC196129BB6BA9000FF930 /* Resources */,
 				CEE56BB629C2194400A9C92E /* SwiftFormat */,
-				CEE56BB729C2195E00A9C92E /* SwiftLint */,
+				CEE56BBD29C34A3300A9C92E /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -295,7 +321,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
 		};
-		CEE56BB729C2195E00A9C92E /* SwiftLint */ = {
+		CEE56BBD29C34A3300A9C92E /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -323,10 +349,10 @@
 			files = (
 				CEEC197D29BB7AAA000FF930 /* LogInView.swift in Sources */,
 				CEE56BB029C1C6BE00A9C92E /* TabBarController.swift in Sources */,
-				CEEC199B29BF4C4C000FF930 /* NavigationViewController.swift in Sources */,
 				CEE56BBA29C304DD00A9C92E /* ProfileItemsViewModel.swift in Sources */,
 				CEE56BB529C1CED000A9C92E /* OtherViewControllers.swift in Sources */,
 				CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */,
+				CEE56BC529C356BD00A9C92E /* ProductCollectionViewCell.swift in Sources */,
 				CEEC196729BB6BA9000FF930 /* AppDelegate.swift in Sources */,
 				CEEC199929BD08BF000FF930 /* SignInWithView.swift in Sources */,
 				CEEC199E29BF50D7000FF930 /* ProfileView.swift in Sources */,
@@ -336,10 +362,16 @@
 				CEEC199329BCFE3C000FF930 /* SignInView.swift in Sources */,
 				CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */,
 				CEEC19A029BF50E6000FF930 /* ProfileViewController.swift in Sources */,
+				CEE56BCC29C4CB0500A9C92E /* UICollectionView+extension.swift in Sources */,
 				CEEC198129BB8173000FF930 /* Colors+extension.swift in Sources */,
+				CEE56BC329C355F800A9C92E /* HomeView.swift in Sources */,
+				CEE56BBF29C34D6900A9C92E /* BlueButton .swift in Sources */,
+				CEE56BCA29C4983800A9C92E /* ProductCategoriesCollectionViewCell.swift in Sources */,
 				CEE56BAE29C0BE1D00A9C92E /* UITableView+extension.swift in Sources */,
 				CEEC199729BD0459000FF930 /* UIButton+extension.swift in Sources */,
+				CEE56BC129C3543E00A9C92E /* NavigationController.swift in Sources */,
 				CEEC19A229BF5164000FF930 /* ProfileCell.swift in Sources */,
+				CEE56BC729C47F9D00A9C92E /* ProductCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
