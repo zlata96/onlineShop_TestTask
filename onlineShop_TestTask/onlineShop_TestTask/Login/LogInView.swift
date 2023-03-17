@@ -15,16 +15,7 @@ class LogInView: UIView {
     var nameInputView = TextFieldView(placeholder: "First name", haveImage: true)
     var passwordInputView = TextFieldView(placeholder: "Password", haveImage: false)
 
-    var loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Login", for: .normal)
-        button.titleLabel?.textColor = .buttonText
-        button.titleLabel?.font = .bold14
-        button.backgroundColor = .button
-        button.titleLabel?.textAlignment = .center
-        button.layer.cornerRadius = 12
-        return button
-    }()
+    var loginButton = BlueButton(text: "Login", withoutImage: true)
 
     override init(frame: CGRect) {
         super.init(frame: frame)

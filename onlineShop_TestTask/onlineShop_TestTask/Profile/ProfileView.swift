@@ -27,23 +27,13 @@ class ProfileView: UIView {
         return label
     }()
 
-    var uploadButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Upload item", for: .normal)
-        button.setTitleColor(.buttonText, for: .normal)
-        button.titleLabel?.font = .bold14
-        button.backgroundColor = .button
-        button.titleLabel?.textAlignment = .center
-        button.layer.cornerRadius = 12
-        return button
-    }()
+    var uploadButton = BlueButton(text: "Upload item", withoutImage: false)
 
     var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(cellWithClass: ProfileCell.self)
-        tableView.rowHeight = 70
+        tableView.rowHeight = 68
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .profileBackground
         return tableView
     }()
 

@@ -15,45 +15,48 @@ class TabBarController: UITabBarController {
     }
 
     private func setupStyleTabBar() {
-        tabBar.tintColor = .profileCycleBackground
-        tabBar.unselectedItemTintColor = .mainBackground
-        tabBar.barTintColor = .subTitle
+        tabBar.tintColor = .selectedTabBarItem
+        tabBar.unselectedItemTintColor = .subTitle
         tabBar.tintAdjustmentMode = .normal
-        tabBar.standardAppearance.
+        tabBar.layer.masksToBounds = true
+        tabBar.isTranslucent = true
+        tabBar.layer.cornerRadius = 30
+        tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        tabBar.backgroundColor = .white
     }
 
     private func setupTabBarItems() {
         let firstViewController = HomeViewController()
         firstViewController.tabBarItem = UITabBarItem(
-            title: "Trade by bata",
+            title: "",
             image: UIImage(named: "homeIcon"),
             tag: 0
         )
 
         let secondViewController = ChatViewController()
         secondViewController.tabBarItem = UITabBarItem(
-            title: "Chat",
+            title: "",
             image: UIImage(named: "chatIcon"),
             tag: 1
         )
 
         let thirdViewController = ProfileViewController()
         thirdViewController.tabBarItem = UITabBarItem(
-            title: "Profile",
+            title: "",
             image: UIImage(named: "profileIcon"),
             tag: 2
         )
 
         let fourthViewContrller = CartViewController()
         fourthViewContrller.tabBarItem = UITabBarItem(
-            title: "Cart",
+            title: "",
             image: UIImage(named: "cartIcon"),
             tag: 3
         )
 
         let fifthViewController = FavoritesViewController()
         fifthViewController.tabBarItem = UITabBarItem(
-            title: "Favorites",
+            title: "",
             image: UIImage(named: "favoritesIcon"),
             tag: 4
         )
@@ -65,6 +68,6 @@ class TabBarController: UITabBarController {
             fourthViewContrller,
             fifthViewController
         ]
-        selectedIndex = 2
+        selectedIndex = 0
     }
 }

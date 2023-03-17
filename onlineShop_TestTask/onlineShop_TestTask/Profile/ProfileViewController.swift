@@ -3,7 +3,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: NavigationController {
     private var profileView = ProfileView()
     private var profileCellsViewModel: [ProfileCellViewModel] = [
         ProfileCellViewModel(name: "Trade store", iconImage: UIImage(named: "tradeIcon"), state: .pointer),
@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = profileView
+        title = "Profile"
         setupTableView()
     }
 

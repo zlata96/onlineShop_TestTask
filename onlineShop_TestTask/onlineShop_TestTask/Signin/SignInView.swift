@@ -16,16 +16,7 @@ class SignInView: UIView {
     var lastNameInputView = TextFieldView(placeholder: "Last name", haveImage: true)
     var emailInputView = TextFieldView(placeholder: "Email", haveImage: true)
 
-    var signInButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Sign in", for: .normal)
-        button.titleLabel?.textColor = .buttonText
-        button.titleLabel?.font = .bold14
-        button.backgroundColor = .button
-        button.titleLabel?.textAlignment = .center
-        button.layer.cornerRadius = 12
-        return button
-    }()
+    var signInButton = BlueButton(text: "Sign in", withoutImage: true)
 
     var alreadyLoginButton: UIButton = {
         let button = UIButton()
