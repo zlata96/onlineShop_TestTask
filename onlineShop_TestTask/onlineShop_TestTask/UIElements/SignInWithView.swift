@@ -46,15 +46,15 @@ class SignInWithView: UIView {
     }
 
     private func makeConstraints() {
-        mainLabel.snp.makeConstraints { make in
-            make.trailing.equalToSuperview()
-            make.centerY.equalTo(iconImageView.snp.centerY)
-            make.leading.equalTo(iconImageView.snp.trailing).offset(12)
+        mainLabel.snp.makeConstraints {
+            $0.trailing.equalToSuperview()
+            $0.centerY.equalTo(iconImageView.snp.centerY)
+            $0.leading.equalTo(iconImageView.snp.trailing).offset(12)
         }
 
-        iconImageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.size.equalTo(36)
+        iconImageView.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.size.equalTo(36)
         }
     }
 }

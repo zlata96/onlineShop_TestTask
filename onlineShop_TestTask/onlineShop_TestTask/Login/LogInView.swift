@@ -42,30 +42,30 @@ class LogInView: UIView {
     }
 
     private func makeConstraints() {
-        mainLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(158)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(20)
+        mainLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(158)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(20)
         }
 
-        nameInputView.snp.makeConstraints { make in
-            make.height.equalTo(30)
-            make.leading.equalToSuperview().offset(44)
-            make.trailing.equalToSuperview().inset(42)
-            make.top.equalTo(mainLabel.snp.bottom).offset(80)
+        nameInputView.snp.makeConstraints {
+            $0.height.equalTo(30)
+            $0.leading.equalToSuperview().offset(44)
+            $0.trailing.equalToSuperview().inset(42)
+            $0.top.equalTo(mainLabel.snp.bottom).offset(80)
         }
 
-        passwordInputView.snp.makeConstraints { make in
-            make.top.equalTo(nameInputView.snp.bottom).offset(35)
-            make.leading.equalToSuperview().offset(44)
-            make.trailing.equalToSuperview().inset(42)
-            make.height.equalTo(30)
+        passwordInputView.snp.makeConstraints {
+            $0.top.equalTo(nameInputView.snp.bottom).offset(35)
+            $0.leading.equalToSuperview().offset(44)
+            $0.trailing.equalToSuperview().inset(42)
+            $0.height.equalTo(30)
         }
 
-        loginButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordInputView.snp.bottom).inset(35)
-            make.leading.trailing.equalToSuperview().inset(43)
-            make.height.equalTo(46)
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(passwordInputView.snp.bottom).inset(35)
+            $0.leading.trailing.equalToSuperview().inset(43)
+            $0.height.equalTo(46)
         }
     }
 

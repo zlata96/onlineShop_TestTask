@@ -60,51 +60,51 @@ class SignInView: UIView {
     }
 
     private func makeConstraints() {
-        mainLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(158)
-            make.centerX.equalToSuperview()
+        mainLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(158)
+            $0.centerX.equalToSuperview()
         }
 
-        firstNameInputView.snp.makeConstraints { make in
-            make.height.equalTo(30)
-            make.leading.equalToSuperview().offset(44)
-            make.trailing.equalToSuperview().inset(42)
-            make.top.equalTo(mainLabel.snp.bottom).offset(80)
+        firstNameInputView.snp.makeConstraints {
+            $0.height.equalTo(30)
+            $0.leading.equalToSuperview().offset(44)
+            $0.trailing.equalToSuperview().inset(42)
+            $0.top.equalTo(mainLabel.snp.bottom).offset(80)
         }
 
-        lastNameInputView.snp.makeConstraints { make in
-            make.height.equalTo(30)
-            make.leading.equalToSuperview().offset(44)
-            make.trailing.equalToSuperview().inset(42)
-            make.top.equalTo(firstNameInputView.snp.bottom).offset(35)
+        lastNameInputView.snp.makeConstraints {
+            $0.height.equalTo(30)
+            $0.leading.equalToSuperview().offset(44)
+            $0.trailing.equalToSuperview().inset(42)
+            $0.top.equalTo(firstNameInputView.snp.bottom).offset(35)
         }
 
-        emailInputView.snp.makeConstraints { make in
-            make.height.equalTo(30)
-            make.leading.equalToSuperview().offset(44)
-            make.trailing.equalToSuperview().inset(42)
-            make.top.equalTo(lastNameInputView.snp.bottom).offset(35)
+        emailInputView.snp.makeConstraints {
+            $0.height.equalTo(30)
+            $0.leading.equalToSuperview().offset(44)
+            $0.trailing.equalToSuperview().inset(42)
+            $0.top.equalTo(lastNameInputView.snp.bottom).offset(35)
         }
 
-        signInButton.snp.makeConstraints { make in
-            make.top.equalTo(emailInputView.snp.bottom).offset(35)
-            make.leading.trailing.equalToSuperview().inset(43)
-            make.height.equalTo(46)
+        signInButton.snp.makeConstraints {
+            $0.top.equalTo(emailInputView.snp.bottom).offset(35)
+            $0.leading.trailing.equalToSuperview().inset(43)
+            $0.height.equalTo(46)
         }
 
-        alreadyLoginButton.snp.makeConstraints { make in
-            make.top.equalTo(signInButton.snp.bottom).offset(16)
-            make.leading.equalToSuperview().inset(43)
+        alreadyLoginButton.snp.makeConstraints {
+            $0.top.equalTo(signInButton.snp.bottom).offset(16)
+            $0.leading.equalToSuperview().inset(43)
         }
 
-        signInWithGoogleView.snp.makeConstraints { make in
-            make.top.equalTo(signInButton.snp.bottom).offset(100)
-            make.leading.equalToSuperview().offset(100)
+        signInWithGoogleView.snp.makeConstraints {
+            $0.top.equalTo(signInButton.snp.bottom).offset(100)
+            $0.leading.equalToSuperview().offset(100)
         }
 
-        signInWithAppleView.snp.makeConstraints { make in
-            make.top.equalTo(signInWithGoogleView.snp.bottom).offset(50)
-            make.leading.equalToSuperview().offset(100)
+        signInWithAppleView.snp.makeConstraints {
+            $0.top.equalTo(signInWithGoogleView.snp.bottom).offset(50)
+            $0.leading.equalToSuperview().offset(100)
         }
     }
 

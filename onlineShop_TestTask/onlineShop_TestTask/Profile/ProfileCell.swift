@@ -79,28 +79,28 @@ class ProfileCell: UITableViewCell {
     }
 
     private func makeConstraints() {
-        iconImageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(32)
-            make.centerY.equalToSuperview()
-            make.size.equalTo(40)
+        iconImageView.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(32)
+            $0.centerY.equalToSuperview()
+            $0.size.equalTo(40)
         }
 
-        profileItemLabel.snp.makeConstraints { make in
-            make.leading.equalTo(iconImageView.snp.trailing).offset(8)
-            make.top.bottom.equalToSuperview().inset(10)
+        profileItemLabel.snp.makeConstraints {
+            $0.leading.equalTo(iconImageView.snp.trailing).offset(8)
+            $0.top.bottom.equalToSuperview().inset(10)
         }
 
-        rightPointer.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(44)
-            make.centerY.equalToSuperview()
-            make.height.equalTo(10)
-            make.width.equalTo(6)
+        rightPointer.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(44)
+            $0.centerY.equalToSuperview()
+            $0.height.equalTo(10)
+            $0.width.equalTo(6)
         }
 
-        balanceLabel.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(44)
-            make.centerY.equalToSuperview()
-            make.top.bottom.equalToSuperview().inset(10)
+        balanceLabel.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(44)
+            $0.centerY.equalToSuperview()
+            $0.top.bottom.equalToSuperview().inset(10)
         }
     }
 }

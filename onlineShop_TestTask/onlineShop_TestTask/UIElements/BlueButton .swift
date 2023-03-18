@@ -49,12 +49,12 @@ class BlueButton: UIButton {
     }
 
     private func makeConstraints() {
-        button.snp.makeConstraints { make in
-            make.top.leading.trailing.bottom.equalToSuperview()
+        button.snp.makeConstraints {
+            $0.top.leading.trailing.bottom.equalToSuperview()
         }
-        uploadImage.snp.makeConstraints { make in
-            make.leading.equalTo(button.snp.leading).offset(52)
-            make.top.bottom.equalToSuperview().inset(12)
+        uploadImage.snp.makeConstraints {
+            $0.leading.equalTo(button.snp.leading).offset(52)
+            $0.top.bottom.equalToSuperview().inset(12)
         }
     }
 }

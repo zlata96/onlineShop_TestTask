@@ -66,33 +66,33 @@ class ProfileView: UIView {
     }
 
     private func makeConstraints() {
-        profilePhotoView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(60)
+        profilePhotoView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(80)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(60)
         }
 
-        changePhotoButton.snp.makeConstraints { make in
-            make.top.equalTo(profilePhotoView.snp.bottom).offset(8)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(15)
+        changePhotoButton.snp.makeConstraints {
+            $0.top.equalTo(profilePhotoView.snp.bottom).offset(8)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(15)
         }
 
-        userNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(changePhotoButton.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
+        userNameLabel.snp.makeConstraints {
+            $0.top.equalTo(changePhotoButton.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
         }
 
-        uploadButton.snp.makeConstraints { make in
-            make.top.equalTo(userNameLabel.snp.bottom).offset(36)
-            make.leading.trailing.equalToSuperview().inset(43)
-            make.height.equalTo(40)
+        uploadButton.snp.makeConstraints {
+            $0.top.equalTo(userNameLabel.snp.bottom).offset(36)
+            $0.leading.trailing.equalToSuperview().inset(43)
+            $0.height.equalTo(40)
         }
 
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(uploadButton.snp.bottom).offset(8)
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(uploadButton.snp.bottom).offset(8)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
         }
     }
 }

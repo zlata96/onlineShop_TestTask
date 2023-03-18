@@ -55,12 +55,12 @@ class TextFieldView: UIView {
     }
 
     private func makeConstraints() {
-        textField.snp.makeConstraints { make in
-            make.top.leading.trailing.bottom.equalToSuperview()
+        textField.snp.makeConstraints {
+            $0.top.leading.trailing.bottom.equalToSuperview()
         }
-        passwordImage.snp.makeConstraints { make in
-            make.trailing.equalTo(textField.snp.trailing).inset(15)
-            make.top.bottom.equalToSuperview().inset(7)
+        passwordImage.snp.makeConstraints {
+            $0.trailing.equalTo(textField.snp.trailing).inset(15)
+            $0.top.bottom.equalToSuperview().inset(7)
         }
     }
 }
