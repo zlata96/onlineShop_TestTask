@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "furnitureIcon.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
