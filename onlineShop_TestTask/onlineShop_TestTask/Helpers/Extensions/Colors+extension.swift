@@ -15,4 +15,6 @@ extension UIColor {
     static let subTitle = UIColor(named: "subTitle")
     static let selectedTabBarItem = UIColor(named: "selectedTabBarItem")
     static let searchBarBackground = UIColor(named: "searchBarBackground")
+    static let categoryBackground = UIColor(named: "categoryBackground")
+    static let saleBackground = UIColor(named: "saleBackground")
 }

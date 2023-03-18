@@ -20,16 +20,20 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    var productCategoryView: UIView = {
-        let view = UIView()
+    var productCategoryView: CategoryView = {
+        let view = CategoryView()
         view.layer.cornerRadius = 6
-        view.backgroundColor = .black
+        view.mainLabel.font = .regular6
         return view
     }()
 
     var addProductButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .button
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.tintColor = .selectedTabBarItem
+        button.contentMode = .center
+        button.layer.cornerRadius = 10
+        button.backgroundColor = .profileCycleBackground
         return button
     }()
 
@@ -79,7 +83,7 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
             $0.leading.equalTo(productImageView.snp.leading).offset(8)
             $0.top.equalTo(productImageView.snp.top).inset(92)
             $0.height.equalTo(12)
-            $0.width.equalTo(20)
+            $0.width.equalTo(30)
         }
 
         productPriceLabel.snp.makeConstraints {

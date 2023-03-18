@@ -24,17 +24,11 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    var productCategoryView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 6
-        view.backgroundColor = .black
-        return view
-    }()
+    var productCategoryView = CategoryView()
 
-    var saleAmountView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = 9
-        view.backgroundColor = .red
+    var saleAmountView: CategoryView = {
+        let view = CategoryView()
+        view.backgroundColor = .saleBackground
         return view
     }()
 

@@ -11,6 +11,7 @@
 		CE13E45B29C5011700913CC2 /* FlashSaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13E45A29C5011700913CC2 /* FlashSaleCollectionViewCell.swift */; };
 		CE13E45D29C50BE200913CC2 /* LatestDealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13E45C29C50BE200913CC2 /* LatestDealsModel.swift */; };
 		CE13E45F29C50BEE00913CC2 /* FlashSaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13E45E29C50BEE00913CC2 /* FlashSaleModel.swift */; };
+		CE13E46129C6484300913CC2 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13E46029C6484300913CC2 /* CategoryView.swift */; };
 		CEE56BAE29C0BE1D00A9C92E /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */; };
 		CEE56BB029C1C6BE00A9C92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */; };
 		CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */; };
@@ -48,6 +49,7 @@
 		CE13E45A29C5011700913CC2 /* FlashSaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE13E45C29C50BE200913CC2 /* LatestDealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestDealsModel.swift; sourceTree = "<group>"; };
 		CE13E45E29C50BEE00913CC2 /* FlashSaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashSaleModel.swift; sourceTree = "<group>"; };
+		CE13E46029C6484300913CC2 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		CEE56BAD29C0BE1D00A9C92E /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				CEEC197E29BB7D0A000FF930 /* TextFieldView.swift */,
 				CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */,
 				CEEC199829BD08BF000FF930 /* SignInWithView.swift */,
+				CE13E46029C6484300913CC2 /* CategoryView.swift */,
 				CEE56BBE29C34D6900A9C92E /* BlueButton .swift */,
 				CEE56BC029C3543E00A9C92E /* NavigationController.swift */,
 			);
@@ -373,6 +376,7 @@
 				CEEC197B29BB73D6000FF930 /* LogInViewController.swift in Sources */,
 				CEEC198F29BCF9CE000FF930 /* Fonts.swift in Sources */,
 				CEEC199329BCFE3C000FF930 /* SignInView.swift in Sources */,
+				CE13E46129C6484300913CC2 /* CategoryView.swift in Sources */,
 				CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */,
 				CE13E45929C4FC5800913CC2 /* ProductCategoriesCollectionViewModel.swift in Sources */,
 				CEEC19A029BF50E6000FF930 /* ProfileViewController.swift in Sources */,
