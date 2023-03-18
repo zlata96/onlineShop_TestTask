@@ -4,7 +4,7 @@
 import UIKit
 
 class HomeView: UIView {
-    var searchBar: UISearchBar = {
+    private var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "What are you looking for?"
         searchBar.searchTextField.font = UIFont.regular10
@@ -15,9 +15,19 @@ class HomeView: UIView {
         return searchBar
     }()
 
-    var firstCategoryView = ProductCategoryView(categoryName: "Latest")
+    var productCategoriesCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(cellWithClass: ProductCategoriesCollectionViewCell.self)
+        collectionView.backgroundColor = .profileBackground
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
+    }()
 
-    var productItemsCollectionView: UICollectionView = {
+    private var firstCategoryView = ProductCategoryView(categoryName: "Latest")
+
+    var latestItemsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -27,11 +37,13 @@ class HomeView: UIView {
         return collectionView
     }()
 
-    var productCategoriesCollectionView: UICollectionView = {
+    private var secondCategoryView = ProductCategoryView(categoryName: "Flash Sale")
+
+    var flashSaleItemsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(cellWithClass: ProductCategoriesCollectionViewCell.self)
+        collectionView.register(cellWithClass: FlashSaleCollectionViewCell.self)
         collectionView.backgroundColor = .profileBackground
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
@@ -59,9 +71,11 @@ class HomeView: UIView {
 
     private func addSubviews() {
         addSubview(searchBar)
-//        addSubview(firstCategoryView)
-//        addSubview(productItemsCollectionView)
         addSubview(productCategoriesCollectionView)
+        addSubview(firstCategoryView)
+        addSubview(latestItemsCollectionView)
+        addSubview(secondCategoryView)
+        addSubview(flashSaleItemsCollectionView)
     }
 
     private func makeConstraints() {
@@ -72,22 +86,35 @@ class HomeView: UIView {
             $0.width.equalTo(262)
         }
 
-//        firstCategoryView.snp.makeConstraints {
-//            $0.leading.trailing.equalToSuperview().inset(12)
-//            $0.top.equalTo(searchBar.snp.bottom).offset(36)
-//            $0.height.equalTo(16)
-//        }
-//
-//        productItemsCollectionView.snp.makeConstraints {
-//            $0.top.equalTo(firstCategoryView.snp.bottom).offset(8)
-//            $0.leading.trailing.equalToSuperview().inset(12)
-//            $0.height.equalTo(150)
-//        }
-
         productCategoriesCollectionView.snp.makeConstraints {
             $0.top.equalTo(searchBar.snp.bottom).offset(16)
-            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.leading.equalToSuperview().offset(12)
+            $0.trailing.equalToSuperview()
             $0.height.equalTo(60)
+        }
+
+        firstCategoryView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.top.equalTo(productCategoriesCollectionView.snp.bottom).offset(36)
+            $0.height.equalTo(16)
+        }
+
+        latestItemsCollectionView.snp.makeConstraints {
+            $0.top.equalTo(firstCategoryView.snp.bottom).offset(8)
+            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.height.equalTo(150)
+        }
+
+        secondCategoryView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.top.equalTo(latestItemsCollectionView.snp.bottom).offset(36)
+            $0.height.equalTo(16)
+        }
+
+        flashSaleItemsCollectionView.snp.makeConstraints {
+            $0.top.equalTo(secondCategoryView.snp.bottom).offset(8)
+            $0.leading.trailing.equalToSuperview().offset(12)
+            $0.height.equalTo(221)
         }
     }
 }
