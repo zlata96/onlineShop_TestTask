@@ -5,17 +5,17 @@ import Foundation
 
 // MARK: - Welcome
 
-struct FlashSaleModel: Codable {
-    let flashSale: [FlashSale]
+struct SaleProducts: Codable {
+    let saleProducts: [SaleProduct]
 
     enum CodingKeys: String, CodingKey {
-        case flashSale = "flash_sale"
+        case saleProducts = "flash_sale"
     }
 }
 
 // MARK: - FlashSale
 
-struct FlashSale: Codable {
+struct SaleProduct: Codable {
     let category, name: String
     let price: Double
     let discount: Int

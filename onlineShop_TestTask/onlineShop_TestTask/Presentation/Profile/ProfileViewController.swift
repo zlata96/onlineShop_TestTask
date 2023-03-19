@@ -12,7 +12,7 @@ class ProfileViewController: NavigationController {
         ProfileCellViewModel(name: "Trade history", iconImage: UIImage(named: "tradeIcon"), state: .pointer),
         ProfileCellViewModel(name: "Restore Purchase", iconImage: UIImage(named: "restoreIcon"), state: .pointer),
         ProfileCellViewModel(name: "Help", iconImage: UIImage(named: "helpIcon"), state: .none),
-        ProfileCellViewModel(name: "Log out", iconImage: UIImage(named: "logOutIcon"), state: .none)
+        ProfileCellViewModel(name: "Log out", iconImage: UIImage(named: "logOutIcon"), state: .none),
     ]
 
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class ProfileViewController: NavigationController {
 // MARK: UITableViewDelegate
 
 extension ProfileViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_: UITableView, didSelectRowAt _: IndexPath) {}
 }
 
 // MARK: UITableViewDataSource

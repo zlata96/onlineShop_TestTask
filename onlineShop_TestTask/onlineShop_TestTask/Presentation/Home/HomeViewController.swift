@@ -5,18 +5,18 @@ import UIKit
 
 class HomeViewController: NavigationController {
     var homeView = HomeView()
-    
+
     private var productCategoriesCollectionViewModel: [ProductCategoriesCollectionViewModel] = [
         ProductCategoriesCollectionViewModel(name: "Phones", iconImage: UIImage(named: "phonesIcon")),
         ProductCategoriesCollectionViewModel(name: "Headphones", iconImage: UIImage(named: "headphonesIcon")),
         ProductCategoriesCollectionViewModel(name: "Games", iconImage: UIImage(named: "gamesIcon")),
         ProductCategoriesCollectionViewModel(name: "Cars", iconImage: UIImage(named: "carsIcon")),
         ProductCategoriesCollectionViewModel(name: "Furniture", iconImage: UIImage(named: "furnitureIcon")),
-        ProductCategoriesCollectionViewModel(name: "Kids", iconImage: UIImage(named: "kidsIcon"))
+        ProductCategoriesCollectionViewModel(name: "Kids", iconImage: UIImage(named: "kidsIcon")),
     ]
 
-    private var flashSaleData: [FlashSale] = []
-    
+    private var saleProductsData: [SaleProduct] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view = homeView
@@ -39,11 +39,11 @@ class HomeViewController: NavigationController {
 }
 
 extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         switch collectionView.tag {
         case 1: return productCategoriesCollectionViewModel.count
         case 2: return 3
-        case 3: return flashSaleData.count
+        case 3: return saleProductsData.count
         default:
             return 1
         }
@@ -63,7 +63,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell2
         case 3:
             let cell3 = collectionView.dequeueReusableCell(withClass: FlashSaleCollectionViewCell.self, for: indexPath)
-            cell3.configure(with: flashSaleData[indexPath.row])
+            cell3.configure(with: saleProductsData[indexPath.row])
             return cell3
         default:
             return UICollectionViewCell()
@@ -76,8 +76,8 @@ extension HomeViewController: UICollectionViewDelegate {}
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-        sizeForItemAt indexPath: IndexPath
+        layout _: UICollectionViewLayout,
+        sizeForItemAt _: IndexPath
     ) -> CGSize {
         switch collectionView.tag {
         case 1: return CGSize(width: 50, height: 60)
@@ -91,25 +91,24 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: Network
 
- extension HomeViewController {
+extension HomeViewController {
     func setupAPI() {
         let api = "https://run.mocky.io/v3/a9ceeb6e-416d-4352-bde6-2203416576ac"
         guard let apiURL = URL(string: api) else { fatalError("Error") }
 
         let session = URLSession(configuration: .default)
-        session.dataTask(with: apiURL) { data, response, error in
+        session.dataTask(with: apiURL) { data, _, error in
             guard let data, error == nil else { return }
             do {
-                let jsonData = try JSONDecoder().decode(FlashSaleModel.self, from: data)
-                 DispatchQueue.main.async {
-                     self.flashSaleData = jsonData.flashSale
-                print(self.flashSaleData)
-                self.homeView.flashSaleItemsCollectionView.reloadData()
-                 }
+                let jsonData = try JSONDecoder().decode(SaleProducts.self, from: data)
+                DispatchQueue.main.async {
+                    self.saleProductsData = jsonData.saleProducts
+                    self.homeView.flashSaleItemsCollectionView.reloadData()
+                }
             } catch {
                 print(error)
             }
 
         }.resume()
     }
- }
+}

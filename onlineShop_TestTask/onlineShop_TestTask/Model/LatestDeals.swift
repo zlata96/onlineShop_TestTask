@@ -5,13 +5,17 @@ import Foundation
 
 // MARK: - Welcome
 
-struct LatestDealsModel: Codable {
-    let latest: [Latest]
+struct LatestDeals: Codable {
+    let latestDeals: [LatestDeal]
+
+    enum CodingKeys: String, CodingKey {
+        case latestDeals = "latest"
+    }
 }
 
 // MARK: - Latest
 
-struct Latest: Codable {
+struct LatestDeal: Codable {
     let category, name: String
     let price: Int
     let imageURL: String

@@ -66,7 +66,7 @@ class TabBarController: UITabBarController {
             secondViewController,
             thirdViewController,
             fourthViewContrller,
-            fifthViewController
+            fifthViewController,
         ]
         selectedIndex = 0
     }

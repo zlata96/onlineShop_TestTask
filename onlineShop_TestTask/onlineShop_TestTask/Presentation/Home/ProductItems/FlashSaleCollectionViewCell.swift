@@ -1,8 +1,8 @@
 // FlashSaleCollectionViewCell.swift
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
-import UIKit
 import Kingfisher
+import UIKit
 
 class FlashSaleCollectionViewCell: UICollectionViewCell {
     var productNameLabel: UILabel = {
@@ -151,7 +151,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
 }
 
 extension FlashSaleCollectionViewCell: Configurable {
-    func configure(with viewModel: FlashSale) {
+    func configure(with viewModel: SaleProduct) {
         productNameLabel.text = viewModel.name
         productPriceLabel.text = "$\(viewModel.price)"
         productImageView.kf.setImage(with: URL(string: viewModel.imageURL))
