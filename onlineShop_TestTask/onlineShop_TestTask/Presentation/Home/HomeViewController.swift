@@ -5,6 +5,7 @@ import UIKit
 
 class HomeViewController: NavigationController {
     var homeView = HomeView()
+    
     private var productCategoriesCollectionViewModel: [ProductCategoriesCollectionViewModel] = [
         ProductCategoriesCollectionViewModel(name: "Phones", iconImage: UIImage(named: "phonesIcon")),
         ProductCategoriesCollectionViewModel(name: "Headphones", iconImage: UIImage(named: "headphonesIcon")),
@@ -14,11 +15,12 @@ class HomeViewController: NavigationController {
         ProductCategoriesCollectionViewModel(name: "Kids", iconImage: UIImage(named: "kidsIcon"))
     ]
 
-    // private var array: FlashSaleModel?
+    private var flashSaleData: [FlashSale] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view = homeView
-        // setupAPI()
+        setupAPI()
         setupCollectionViews()
     }
 
@@ -41,7 +43,7 @@ extension HomeViewController: UICollectionViewDataSource {
         switch collectionView.tag {
         case 1: return productCategoriesCollectionViewModel.count
         case 2: return 3
-        case 3: return 2
+        case 3: return flashSaleData.count
         default:
             return 1
         }
@@ -61,6 +63,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell2
         case 3:
             let cell3 = collectionView.dequeueReusableCell(withClass: FlashSaleCollectionViewCell.self, for: indexPath)
+            cell3.configure(with: flashSaleData[indexPath.row])
             return cell3
         default:
             return UICollectionViewCell()
@@ -88,24 +91,25 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: Network
 
-// extension HomeViewController {
-//    func setupAPI() {
-//        let api = "https://run.mocky.io/v3/a9ceeb6e-416d-4352-bde6-2203416576ac"
-//        guard let apiURL = URL(string: api) else { fatalError("Error") }
-//
-//        let session = URLSession(configuration: .default)
-//        session.dataTask(with: apiURL) { data, response, error in
-//            guard let data, error == nil else { return }
-//            do {
-//                let json = try JSONDecoder().decode(FlashSaleModel.self, from: data)
-//                // DispatchQueue.main.async {
-//                self.array = json
-//                print(self.array)
-//                // }
-//            } catch {
-//                print(error)
-//            }
-//
-//        }.resume()
-//    }
-// }
+ extension HomeViewController {
+    func setupAPI() {
+        let api = "https://run.mocky.io/v3/a9ceeb6e-416d-4352-bde6-2203416576ac"
+        guard let apiURL = URL(string: api) else { fatalError("Error") }
+
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: apiURL) { data, response, error in
+            guard let data, error == nil else { return }
+            do {
+                let jsonData = try JSONDecoder().decode(FlashSaleModel.self, from: data)
+                 DispatchQueue.main.async {
+                     self.flashSaleData = jsonData.flashSale
+                print(self.flashSaleData)
+                self.homeView.flashSaleItemsCollectionView.reloadData()
+                 }
+            } catch {
+                print(error)
+            }
+
+        }.resume()
+    }
+ }

@@ -1,15 +1,12 @@
 // FlashSaleCollectionViewCell.swift
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
-// ProductCollectionViewCell.swift
-// onlineSHop_TestTask. Created by Zlata Guseva.
-
 import UIKit
 
 class FlashSaleCollectionViewCell: UICollectionViewCell {
     var productNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .bold26
+        label.font = .bold20
         label.textColor = .black
         label.text = "product Name"
         label.numberOfLines = 0
