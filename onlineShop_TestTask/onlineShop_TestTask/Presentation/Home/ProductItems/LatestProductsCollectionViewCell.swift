@@ -3,31 +3,34 @@
 
 import UIKit
 
-class ProductItemsCollectionViewCell: UICollectionViewCell {
-    var productNameLabel: UILabel = {
+class LatestProductsCollectionViewCell: UICollectionViewCell {
+    private var productNameLabel: UILabel = {
         let label = UILabel()
         label.font = .bold10
-        label.textColor = .black
-        label.text = "productNameLabel"
+        label.textColor = .white
+        label.numberOfLines = 0
         return label
     }()
 
-    var productPriceLabel: UILabel = {
+    private var productPriceLabel: UILabel = {
         let label = UILabel()
-        label.font = .bold8
-        label.textColor = .black
-        label.text = "productPriceLabel"
+        label.font = .bold10
+        label.textColor = .white
         return label
     }()
 
-    var productCategoryView: CategoryView = {
-        let view = CategoryView()
-        view.layer.cornerRadius = 6
-        view.mainLabel.font = .regular6
-        return view
+    private var productCategoryLabel: UILabel = {
+        let label = UILabel()
+        label.font = .regular6
+        label.textColor = .mainText
+        label.backgroundColor = .categoryBackground?.withAlphaComponent(0.85)
+        label.textAlignment = .center
+        label.layer.cornerRadius = 6
+        label.layer.masksToBounds = true
+        return label
     }()
 
-    var addProductButton: UIButton = {
+    private var addProductButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "plus"), for: .normal)
         button.tintColor = .selectedTabBarItem
@@ -37,7 +40,7 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
         return button
     }()
 
-    var productImageView: UIImageView = {
+    private var productImageView: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .gray
         image.contentMode = .scaleAspectFill
@@ -72,7 +75,7 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
         productImageView.addSubview(productPriceLabel)
         productImageView.addSubview(productNameLabel)
         productImageView.addSubview(addProductButton)
-        productImageView.addSubview(productCategoryView)
+        productImageView.addSubview(productCategoryLabel)
     }
 
     private func makeConstraints() {
@@ -80,7 +83,7 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
             $0.leading.top.bottom.trailing.equalToSuperview()
         }
 
-        productCategoryView.snp.makeConstraints {
+        productCategoryLabel.snp.makeConstraints {
             $0.leading.equalTo(productImageView.snp.leading).offset(8)
             $0.top.equalTo(productImageView.snp.top).inset(92)
             $0.height.equalTo(12)
@@ -94,7 +97,7 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
 
         productNameLabel.snp.makeConstraints {
             $0.leading.equalTo(productImageView.snp.leading).offset(8)
-            $0.top.equalTo(productCategoryView.snp.bottom).offset(8)
+            $0.top.equalTo(productCategoryLabel.snp.bottom).offset(8)
         }
 
         addProductButton.snp.makeConstraints {
@@ -105,10 +108,11 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension ProductItemsCollectionViewCell: Configurable {
+extension LatestProductsCollectionViewCell: Configurable {
     func configure(with viewModel: LatestDeal) {
         productNameLabel.text = viewModel.name
         productPriceLabel.text = "$\(viewModel.price)"
         productImageView.kf.setImage(with: URL(string: viewModel.imageURL))
+        productCategoryLabel.text = viewModel.category
     }
 }

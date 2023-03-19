@@ -4,7 +4,7 @@
 import UIKit
 
 class LogInView: UIView {
-    var mainLabel: UILabel = {
+    private var mainLabel: UILabel = {
         let label = UILabel()
         label.text = "Welcome back"
         label.textColor = .mainText
@@ -12,10 +12,10 @@ class LogInView: UIView {
         return label
     }()
 
-    var nameInputView = TextFieldView(placeholder: "First name", haveImage: true)
-    var passwordInputView = TextFieldView(placeholder: "Password", haveImage: false)
+    private var nameInputView = TextFieldView(placeholder: "First name", haveImage: true)
+    private var passwordInputView = TextFieldView(placeholder: "Password", haveImage: false)
 
-    var loginButton = BlueButton(text: "Login", withoutImage: true)
+    private var loginButton = BlueButton(text: "Login", withoutImage: true)
 
     override init(frame: CGRect) {
         super.init(frame: frame)

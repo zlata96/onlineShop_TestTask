@@ -31,7 +31,7 @@ class HomeView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(cellWithClass: ProductItemsCollectionViewCell.self)
+        collectionView.register(cellWithClass: LatestProductsCollectionViewCell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .profileBackground
         return collectionView
@@ -43,7 +43,7 @@ class HomeView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(cellWithClass: FlashSaleCollectionViewCell.self)
+        collectionView.register(cellWithClass: SaleProductsCollectionViewCell.self)
         collectionView.backgroundColor = .profileBackground
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView

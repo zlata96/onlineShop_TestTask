@@ -7,7 +7,7 @@ class ProductCategoryView: UIView {
     var categoryName: String
     lazy var categoryLabel: UILabel = {
         let label = UILabel()
-        label.font = .bold14
+        label.font = .bold16
         label.textColor = .mainText
         label.text = categoryName
         return label

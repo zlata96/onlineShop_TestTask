@@ -4,14 +4,14 @@
 import UIKit
 
 class ProfileView: UIView {
-    var profilePhotoView: UIImageView = {
+    private var profilePhotoView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "accountPhoto")
         image.layer.cornerRadius = 30
         return image
     }()
 
-    var changePhotoButton: UIButton = {
+    private var changePhotoButton: UIButton = {
         let button = UIButton()
         button.setTitle("Change photo", for: .normal)
         button.setTitleColor(.subTitle, for: .normal)
@@ -20,14 +20,14 @@ class ProfileView: UIView {
         return button
     }()
 
-    var userNameLabel: UILabel = {
+    private var userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Satria Adhi Pradana"
         label.font = .bold14
         return label
     }()
 
-    var uploadButton = BlueButton(text: "Upload item", withoutImage: false)
+    private var uploadButton = BlueButton(text: "Upload item", withoutImage: false)
 
     var tableView: UITableView = {
         let tableView = UITableView()

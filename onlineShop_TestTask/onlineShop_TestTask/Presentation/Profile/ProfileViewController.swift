@@ -5,15 +5,7 @@ import UIKit
 
 class ProfileViewController: NavigationController {
     private var profileView = ProfileView()
-    private var profileCellsViewModel: [ProfileCellViewModel] = [
-        ProfileCellViewModel(name: "Trade store", iconImage: UIImage(named: "tradeIcon"), state: .pointer),
-        ProfileCellViewModel(name: "Payment method", iconImage: UIImage(named: "tradeIcon"), state: .pointer),
-        ProfileCellViewModel(name: "Balance", iconImage: UIImage(named: "tradeIcon"), state: .text(value: "$ 1593")),
-        ProfileCellViewModel(name: "Trade history", iconImage: UIImage(named: "tradeIcon"), state: .pointer),
-        ProfileCellViewModel(name: "Restore Purchase", iconImage: UIImage(named: "restoreIcon"), state: .pointer),
-        ProfileCellViewModel(name: "Help", iconImage: UIImage(named: "helpIcon"), state: .none),
-        ProfileCellViewModel(name: "Log out", iconImage: UIImage(named: "logOutIcon"), state: .none),
-    ]
+    private var profileCellsViewModel = ProfileCellViewModel.allItems
 
     override func viewDidLoad() {
         super.viewDidLoad()

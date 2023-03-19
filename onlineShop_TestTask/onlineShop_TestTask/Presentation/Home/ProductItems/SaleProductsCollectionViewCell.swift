@@ -4,33 +4,45 @@
 import Kingfisher
 import UIKit
 
-class FlashSaleCollectionViewCell: UICollectionViewCell {
-    var productNameLabel: UILabel = {
+class SaleProductsCollectionViewCell: UICollectionViewCell {
+    private var productNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .bold20
-        label.textColor = .black
-        label.text = "product Name"
+        label.font = .bold16
+        label.textColor = .white
         label.numberOfLines = 0
         return label
     }()
 
-    var productPriceLabel: UILabel = {
+    private var productPriceLabel: UILabel = {
         let label = UILabel()
-        label.font = .bold10
-        label.textColor = .black
-        label.text = "productPrice"
+        label.font = .bold14
+        label.textColor = .white
         return label
     }()
 
-    var productCategoryView = CategoryView()
-
-    var saleAmountView: CategoryView = {
-        let view = CategoryView()
-        view.backgroundColor = .saleBackground
-        return view
+    private var productCategoryLabel: UILabel = {
+        let label = UILabel()
+        label.font = .bold10
+        label.textColor = .mainText
+        label.backgroundColor = .categoryBackground?.withAlphaComponent(0.85)
+        label.textAlignment = .center
+        label.layer.cornerRadius = 9
+        label.layer.masksToBounds = true
+        return label
     }()
 
-    var personPhotoView: UIImageView = {
+    private var saleAmountLabel: UILabel = {
+        let label = UILabel()
+        label.font = .bold10
+        label.textColor = .white
+        label.backgroundColor = .saleBackground
+        label.textAlignment = .center
+        label.layer.cornerRadius = 9
+        label.layer.masksToBounds = true
+        return label
+    }()
+
+    private var personPhotoView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 12
         imageView.backgroundColor = .black
@@ -38,7 +50,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
 
-    var addToCartProductButton: UIButton = {
+    private var addToCartProductButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "plus"), for: .normal)
         button.tintColor = .selectedTabBarItem
@@ -48,7 +60,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
         return button
     }()
 
-    var addToFavouritiesProductButton: UIButton = {
+    private var addToFavouritiesProductButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .red
         button.setImage(UIImage(named: "favoritesIcon"), for: .normal)
@@ -59,7 +71,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
         return button
     }()
 
-    var productImageView: UIImageView = {
+    private var productImageView: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .gray
         image.contentMode = .scaleAspectFill
@@ -95,9 +107,9 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
         productImageView.addSubview(productNameLabel)
         productImageView.addSubview(addToCartProductButton)
         productImageView.addSubview(addToFavouritiesProductButton)
-        productImageView.addSubview(productCategoryView)
+        productImageView.addSubview(productCategoryLabel)
         productImageView.addSubview(personPhotoView)
-        productImageView.addSubview(saleAmountView)
+        productImageView.addSubview(saleAmountLabel)
     }
 
     private func makeConstraints() {
@@ -105,7 +117,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
             $0.leading.top.bottom.trailing.equalToSuperview()
         }
 
-        saleAmountView.snp.makeConstraints {
+        saleAmountLabel.snp.makeConstraints {
             $0.trailing.equalTo(productImageView.snp.trailing).inset(8)
             $0.top.equalTo(productImageView.snp.top).inset(8)
             $0.height.equalTo(18)
@@ -118,7 +130,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
             $0.size.equalTo(24)
         }
 
-        productCategoryView.snp.makeConstraints {
+        productCategoryLabel.snp.makeConstraints {
             $0.leading.equalTo(productImageView.snp.leading).offset(8)
             $0.top.equalTo(productImageView.snp.top).inset(92)
             $0.height.equalTo(18)
@@ -133,7 +145,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
         productNameLabel.snp.makeConstraints {
             $0.leading.equalTo(productImageView.snp.leading).offset(8)
             $0.trailing.equalTo(productImageView.snp.trailing).offset(8)
-            $0.top.equalTo(productCategoryView.snp.bottom).offset(8)
+            $0.top.equalTo(productCategoryLabel.snp.bottom).offset(12)
         }
 
         addToCartProductButton.snp.makeConstraints {
@@ -150,10 +162,12 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension FlashSaleCollectionViewCell: Configurable {
+extension SaleProductsCollectionViewCell: Configurable {
     func configure(with viewModel: SaleProduct) {
         productNameLabel.text = viewModel.name
         productPriceLabel.text = "$\(viewModel.price)"
         productImageView.kf.setImage(with: URL(string: viewModel.imageURL))
+        saleAmountLabel.text = "\(viewModel.discount)% off"
+        productCategoryLabel.text = viewModel.category
     }
 }

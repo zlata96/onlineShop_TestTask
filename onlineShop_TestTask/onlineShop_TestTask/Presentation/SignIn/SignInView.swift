@@ -4,7 +4,7 @@
 import UIKit
 
 class SignInView: UIView {
-    var mainLabel: UILabel = {
+    private var mainLabel: UILabel = {
         let label = UILabel()
         label.text = "Sign in"
         label.textColor = .mainText
@@ -12,11 +12,11 @@ class SignInView: UIView {
         return label
     }()
 
-    var firstNameInputView = TextFieldView(placeholder: "First name", haveImage: true)
-    var lastNameInputView = TextFieldView(placeholder: "Last name", haveImage: true)
-    var emailInputView = TextFieldView(placeholder: "Email", haveImage: true)
+    private var firstNameInputView = TextFieldView(placeholder: "First name", haveImage: true)
+    private var lastNameInputView = TextFieldView(placeholder: "Last name", haveImage: true)
+    private var emailInputView = TextFieldView(placeholder: "Email", haveImage: true)
 
-    var signInButton = BlueButton(text: "Sign in", withoutImage: true)
+    private var signInButton = BlueButton(text: "Sign in", withoutImage: true)
 
     var alreadyLoginButton: UIButton = {
         let button = UIButton()
@@ -27,9 +27,9 @@ class SignInView: UIView {
         return button
     }()
 
-    var signInWithGoogleView = SignInWithView(with: "Sign in with Google", iconImage: UIImage(named: "google"))
+    private var signInWithGoogleView = SignInWithView(with: "Sign in with Google", iconImage: UIImage(named: "google"))
 
-    var signInWithAppleView = SignInWithView(with: "Sign in with Apple", iconImage: UIImage(named: "apple"))
+    private var signInWithAppleView = SignInWithView(with: "Sign in with Apple", iconImage: UIImage(named: "apple"))
 
     override init(frame: CGRect) {
         super.init(frame: frame)

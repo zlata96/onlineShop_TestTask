@@ -4,7 +4,7 @@
 import UIKit
 
 class ProductCategoriesCollectionViewCell: UICollectionViewCell {
-    var productCategoryLabel: UILabel = {
+    private var productCategoryLabel: UILabel = {
         let label = UILabel()
         label.font = .regular8
         label.textColor = .subTitle
@@ -12,7 +12,7 @@ class ProductCategoriesCollectionViewCell: UICollectionViewCell {
         return label
     }()
 
-    var productCategoryImageView: UIImageView = {
+    private var productCategoryImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .profileCycleBackground
         imageView.contentMode = .center
