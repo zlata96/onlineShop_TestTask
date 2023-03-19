@@ -1,4 +1,4 @@
-// FlashSaleModel.swift
+// SaleProducts.swift
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
 import Foundation

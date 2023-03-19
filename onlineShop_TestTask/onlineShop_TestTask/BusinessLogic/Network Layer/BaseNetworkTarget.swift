@@ -1,3 +1,6 @@
+// BaseNetworkTarget.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
+
 import Foundation
 import Moya
 
@@ -5,7 +8,7 @@ protocol BaseNetworkTarget: TargetType {}
 
 extension BaseNetworkTarget {
     var parameterEncoding: ParameterEncoding {
-        return JSONEncoding.default
+        JSONEncoding.default
     }
 
     var headers: [String: String]? {
@@ -20,6 +23,6 @@ extension BaseNetworkTarget {
     }
 
     var sampleData: Data {
-        return Data()
+        Data()
     }
 }

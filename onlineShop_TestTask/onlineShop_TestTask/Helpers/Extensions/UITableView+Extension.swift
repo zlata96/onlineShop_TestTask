@@ -1,4 +1,4 @@
-// UITableView+extension.swift
+// UITableView+Extension.swift
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit

@@ -1,4 +1,4 @@
-// LatestDealsModel.swift
+// LatestDeals.swift
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
 import Foundation
