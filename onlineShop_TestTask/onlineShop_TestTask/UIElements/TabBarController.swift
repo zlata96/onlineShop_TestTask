@@ -33,7 +33,7 @@ class TabBarController: UITabBarController {
             tag: 0
         )
 
-        let secondViewController = ChatViewController()
+        let secondViewController = SoonViewController()
         secondViewController.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "chatIcon"),
@@ -47,14 +47,14 @@ class TabBarController: UITabBarController {
             tag: 2
         )
 
-        let fourthViewContrller = CartViewController()
+        let fourthViewContrller = SoonViewController()
         fourthViewContrller.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "cartIcon"),
             tag: 3
         )
 
-        let fifthViewController = FavoritesViewController()
+        let fifthViewController = SoonViewController()
         fifthViewController.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "favoritesIcon"),
