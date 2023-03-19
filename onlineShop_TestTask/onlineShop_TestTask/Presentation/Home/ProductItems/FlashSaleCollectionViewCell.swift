@@ -2,6 +2,7 @@
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
+import Kingfisher
 
 class FlashSaleCollectionViewCell: UICollectionViewCell {
     var productNameLabel: UILabel = {
@@ -63,6 +64,7 @@ class FlashSaleCollectionViewCell: UICollectionViewCell {
         image.backgroundColor = .gray
         image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 12
+        image.layer.masksToBounds = true
         return image
     }()
 
@@ -152,5 +154,6 @@ extension FlashSaleCollectionViewCell: Configurable {
     func configure(with viewModel: FlashSale) {
         productNameLabel.text = viewModel.name
         productPriceLabel.text = "$\(viewModel.price)"
+        productImageView.kf.setImage(with: URL(string: viewModel.imageURL))
     }
 }
