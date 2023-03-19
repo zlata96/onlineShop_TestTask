@@ -42,6 +42,7 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
         image.backgroundColor = .gray
         image.contentMode = .scaleAspectFill
         image.layer.cornerRadius = 12
+        image.layer.masksToBounds = true
         return image
     }()
 
@@ -101,5 +102,13 @@ class ProductItemsCollectionViewCell: UICollectionViewCell {
             $0.bottom.equalTo(productImageView.snp.bottom).inset(5)
             $0.size.equalTo(20)
         }
+    }
+}
+
+extension ProductItemsCollectionViewCell: Configurable {
+    func configure(with viewModel: LatestDeal) {
+        productNameLabel.text = viewModel.name
+        productPriceLabel.text = "$\(viewModel.price)"
+        productImageView.kf.setImage(with: URL(string: viewModel.imageURL))
     }
 }

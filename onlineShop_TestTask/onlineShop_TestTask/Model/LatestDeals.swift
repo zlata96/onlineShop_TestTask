@@ -3,8 +3,6 @@
 
 import Foundation
 
-// MARK: - Welcome
-
 struct LatestDeals: Codable {
     let latestDeals: [LatestDeal]
 
@@ -12,8 +10,6 @@ struct LatestDeals: Codable {
         case latestDeals = "latest"
     }
 }
-
-// MARK: - Latest
 
 struct LatestDeal: Codable {
     let category, name: String

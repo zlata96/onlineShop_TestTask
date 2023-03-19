@@ -4,6 +4,6 @@
 import Moya
 
 protocol ProductsProtocol {
-    func getSales() -> SaleProducts
-    func getLatestDeals() -> LatestDeals
+    func getSales(completion: @escaping ([SaleProduct]) -> Void)
+    func getLatestDeals(completion: @escaping ([LatestDeal]) -> Void)
 }
