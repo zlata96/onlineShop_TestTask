@@ -36,28 +36,28 @@ class TabBarController: UITabBarController {
         let secondViewController = SoonViewController()
         secondViewController.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "chatIcon"),
+            image: UIImage(named: "favoritesIcon"),
             tag: 1
         )
 
         let thirdViewController = ProfileViewController()
         thirdViewController.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "profileIcon"),
+            image: UIImage(named: "cartIcon"),
             tag: 2
         )
 
         let fourthViewContrller = SoonViewController()
         fourthViewContrller.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "cartIcon"),
+            image: UIImage(named: "chatIcon"),
             tag: 3
         )
 
         let fifthViewController = SoonViewController()
         fifthViewController.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "favoritesIcon"),
+            image: UIImage(named: "profileIcon"),
             tag: 4
         )
 
