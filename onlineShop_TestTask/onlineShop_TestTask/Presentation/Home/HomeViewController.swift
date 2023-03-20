@@ -27,14 +27,14 @@ class HomeViewController: NavigationController {
             self.homeView.flashSaleItemsCollectionView.reloadData()
         }
     }
-    
+
     private func getLatestProducts() {
         productsService.getLatestDeals { latestsProducts in
             self.latestProductsData = latestsProducts
             self.homeView.latestItemsCollectionView.reloadData()
         }
     }
-    
+
     private func setupCollectionViews() {
         homeView.latestItemsCollectionView.delegate = self
         homeView.latestItemsCollectionView.dataSource = self

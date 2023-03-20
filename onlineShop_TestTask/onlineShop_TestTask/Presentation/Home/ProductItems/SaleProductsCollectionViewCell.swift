@@ -1,4 +1,4 @@
-// FlashSaleCollectionViewCell.swift
+// SaleProductsCollectionViewCell.swift
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
 import Kingfisher

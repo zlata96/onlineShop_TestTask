@@ -10,7 +10,6 @@ class ProfileViewController: NavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = profileView
-        title = "Profile"
         setupTableView()
     }
 

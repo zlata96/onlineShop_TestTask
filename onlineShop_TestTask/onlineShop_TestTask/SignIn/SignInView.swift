@@ -12,30 +12,10 @@ class SignInView: UIView {
         return label
     }()
 
-    var firstNameInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "First name")
-        view.textField.textContentType = .givenName
-        return view
-    }()
-
-    var lastNameInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Last name")
-        view.textField.textContentType = .familyName
-        return view
-    }()
-
-    var emailInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Email")
-        view.textField.textContentType = .emailAddress
-        return view
-    }()
-
-    var passwordInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Password", imageIsHiden: false)
-        view.textField.textContentType = .newPassword
-        view.textField.isSecureTextEntry = true
-        return view
-    }()
+    var firstNameInputView = TextFieldView(placeholder: "First name", imageIsHiden: true)
+    var lastNameInputView = TextFieldView(placeholder: "Last name", imageIsHiden: true)
+    var emailInputView = TextFieldView(placeholder: "Email", imageIsHiden: true)
+    var passwordInputView = TextFieldView(placeholder: "Password", imageIsHiden: false)
 
     var signInButton = BlueButton(text: "Sign in", withoutImage: true)
 

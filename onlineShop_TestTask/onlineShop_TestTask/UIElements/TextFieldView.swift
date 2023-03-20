@@ -5,7 +5,7 @@ import UIKit
 
 class TextFieldView: UIView {
     var placeholder: String
-    var haveImage: Bool
+    var imageIsHiden: Bool
 
     lazy var textField: UITextField = {
         let textField = UITextField()
@@ -22,13 +22,13 @@ class TextFieldView: UIView {
     lazy var passwordImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "password")
-        image.isHidden = haveImage
+        image.isHidden = imageIsHiden
         return image
     }()
 
-    required init(placeholder: String, haveImage: Bool) {
+    required init(placeholder: String, imageIsHiden: Bool = true) {
         self.placeholder = placeholder
-        self.haveImage = haveImage
+        self.imageIsHiden = imageIsHiden
         super.init(frame: .zero)
         commonInit()
     }

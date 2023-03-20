@@ -7,7 +7,7 @@ struct ProfileCellViewModel {
     var name: String
     var iconImage: UIImage?
     var state: ProfileCellState
-    
+
     static let allItems = [
         ProfileCellViewModel(name: "Trade store", iconImage: UIImage(named: "tradeIcon"), state: .pointer),
         ProfileCellViewModel(name: "Payment method", iconImage: UIImage(named: "tradeIcon"), state: .pointer),

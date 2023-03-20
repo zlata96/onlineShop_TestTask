@@ -40,7 +40,7 @@ class TabBarController: UITabBarController {
             tag: 1
         )
 
-        let thirdViewController = ProfileViewController()
+        let thirdViewController = SoonViewController()
         thirdViewController.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "cartIcon"),
@@ -54,7 +54,7 @@ class TabBarController: UITabBarController {
             tag: 3
         )
 
-        let fifthViewController = SoonViewController()
+        let fifthViewController = ProfileViewController()
         fifthViewController.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "profileIcon"),

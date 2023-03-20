@@ -4,7 +4,7 @@
 import UIKit
 
 class LogInView: UIView {
-    private var mainLabel: UILabel = {
+    var mainLabel: UILabel = {
         let label = UILabel()
         label.text = "Welcome back"
         label.textColor = .mainText
@@ -12,10 +12,10 @@ class LogInView: UIView {
         return label
     }()
 
-    private var nameInputView = TextFieldView(placeholder: "First name", haveImage: true)
-    private var passwordInputView = TextFieldView(placeholder: "Password", haveImage: false)
+    var nameInputView = TextFieldView(placeholder: "First name", imageIsHiden: true)
+    var passwordInputView = TextFieldView(placeholder: "Password", imageIsHiden: false)
 
-    private var loginButton = BlueButton(text: "Login", withoutImage: true)
+    var loginButton = BlueButton(text: "Login", withoutImage: true)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -63,7 +63,7 @@ class LogInView: UIView {
         }
 
         loginButton.snp.makeConstraints {
-            $0.top.equalTo(passwordInputView.snp.bottom).inset(35)
+            $0.top.equalTo(passwordInputView.snp.bottom).offset(35)
             $0.leading.trailing.equalToSuperview().inset(43)
             $0.height.equalTo(46)
         }

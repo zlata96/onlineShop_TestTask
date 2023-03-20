@@ -1,9 +1,5 @@
-//
-//  Protocols.swift
-//  onlineShop_TestTask
-//
-//  Created by Zlata  on 19.03.2023.
-//
+// Protocols.swift
+// onlineSHop_TestTask. Created by Zlata Guseva.
 
 import UIKit
 

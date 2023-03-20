@@ -5,6 +5,7 @@ import UIKit
 
 class SignInViewController: UIViewController {
     private var signInView = SignInView()
+    private var router = Router()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,12 +14,18 @@ class SignInViewController: UIViewController {
     }
 
     private func addTargets() {
-        signInView.alreadyLoginButton.addTarget(self, action: #selector(goToLogInnViewController), for: .touchUpInside)
+        signInView.alreadyLoginButton.addTarget(self, action: #selector(alreadyLoginButtonPressed), for: .touchUpInside)
+        signInView.signInButton.button.addTarget(self, action: #selector(signInButtonPressed), for: .touchUpInside)
     }
 
     @objc
-    private func goToLogInnViewController() {
+    private func alreadyLoginButtonPressed() {
         let logInnViewController = NavigationController(rootViewController: LogInViewController())
         present(logInnViewController, animated: true)
+    }
+
+    @objc
+    private func signInButtonPressed() {
+        router.setRootViewController(controller: TabBarController())
     }
 }

@@ -6,7 +6,7 @@ import UIKit
 struct ProductCategoriesCollectionViewModel {
     var name: String
     var iconImage: UIImage?
-    
+
     static let allItems = [
         ProductCategoriesCollectionViewModel(name: "Phones", iconImage: UIImage(named: "phonesIcon")),
         ProductCategoriesCollectionViewModel(name: "Headphones", iconImage: UIImage(named: "headphonesIcon")),
