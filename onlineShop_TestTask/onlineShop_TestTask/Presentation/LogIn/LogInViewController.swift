@@ -19,6 +19,10 @@ class LogInViewController: UIViewController {
 
     @objc
     private func logInnButtonPressed() {
-        router.setRootViewController(controller: TabBarController())
+        if logInView.emailInputView.textField.text?.isValidEmail == true {
+            router.setRootViewController(controller: TabBarController())
+        } else {
+            presentAlert(message: "Something wrong with your email")
+        }
     }
 }
