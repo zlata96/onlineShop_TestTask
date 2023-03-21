@@ -31,13 +31,13 @@ class SignInView: UIView {
     }()
 
     var passwordInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Password", imageIsHiden: false)
+        let view = TextFieldView(placeholder: "Password", buttonIsHiden: false)
         view.textField.textContentType = .newPassword
         view.textField.isSecureTextEntry = true
         return view
     }()
 
-    var signInButton = BlueButton(text: "Sign in", withoutImage: true)
+    var signInButton = BlueButton(text: "Sign in")
 
     var alreadyLoginButton: UIButton = {
         let button = UIButton()

@@ -3,13 +3,14 @@
 
 import UIKit
 
-class ProfileViewController: NavigationController {
+class ProfileViewController: UIViewController {
     private var profileView = ProfileView()
     private var profileCellsViewModel = ProfileCellViewModel.allItems
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = profileView
+        title = "Profile"
         setupTableView()
     }
 

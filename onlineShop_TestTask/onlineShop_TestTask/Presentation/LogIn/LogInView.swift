@@ -12,15 +12,24 @@ class LogInView: UIView {
         return label
     }()
 
-    var nameInputView = TextFieldView(placeholder: "First name", imageIsHiden: true)
+    var emailInputView = TextFieldView(placeholder: "First name", buttonIsHiden: true)
     var passwordInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Password", imageIsHiden: false)
+        let view = TextFieldView(placeholder: "Password", buttonIsHiden: false)
         view.textField.textContentType = .password
         view.textField.isSecureTextEntry = true
         return view
     }()
 
-    var loginButton = BlueButton(text: "Login", withoutImage: true)
+    var haveNoAccountButton: UIButton = {
+        let button = UIButton()
+        button.buttonTextColorChange(For: "Still have no account? Sign in", into: .button ?? .black, from: 23, to: 7)
+        button.titleLabel?.textColor = .mainText
+        button.titleLabel?.font = .regular10
+        button.backgroundColor = .clear
+        return button
+    }()
+
+    var loginButton = BlueButton(text: "Login")
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,8 +50,9 @@ class LogInView: UIView {
 
     private func addSubviews() {
         addSubview(mainLabel)
-        addSubview(nameInputView)
+        addSubview(emailInputView)
         addSubview(passwordInputView)
+        addSubview(haveNoAccountButton)
         addSubview(loginButton)
     }
 
@@ -53,7 +63,7 @@ class LogInView: UIView {
             $0.height.equalTo(20)
         }
 
-        nameInputView.snp.makeConstraints {
+        emailInputView.snp.makeConstraints {
             $0.height.equalTo(30)
             $0.leading.equalToSuperview().offset(44)
             $0.trailing.equalToSuperview().inset(42)
@@ -61,10 +71,15 @@ class LogInView: UIView {
         }
 
         passwordInputView.snp.makeConstraints {
-            $0.top.equalTo(nameInputView.snp.bottom).offset(35)
+            $0.top.equalTo(emailInputView.snp.bottom).offset(35)
             $0.leading.equalToSuperview().offset(44)
             $0.trailing.equalToSuperview().inset(42)
             $0.height.equalTo(30)
+        }
+
+        haveNoAccountButton.snp.makeConstraints {
+            $0.top.equalTo(loginButton.snp.bottom).offset(16)
+            $0.leading.equalToSuperview().inset(43)
         }
 
         loginButton.snp.makeConstraints {
@@ -78,6 +93,7 @@ class LogInView: UIView {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UIView.endEditing))
         addGestureRecognizer(tapGesture)
         tapGesture.cancelsTouchesInView = false
+
 //        nameInputView.textField.addTarget(
 //            self,
 //            action: #selector(textFieldDidChange),

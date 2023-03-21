@@ -26,7 +26,7 @@ class BlueButton: UIButton {
         return image
     }()
 
-    required init(text: String, withoutImage: Bool) {
+    required init(text: String, withoutImage: Bool = true) {
         self.text = text
         self.withoutImage = withoutImage
         super.init(frame: .zero)

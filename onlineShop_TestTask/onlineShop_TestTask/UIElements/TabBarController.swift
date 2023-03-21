@@ -54,7 +54,7 @@ class TabBarController: UITabBarController {
             tag: 3
         )
 
-        let fifthViewController = ProfileViewController()
+        let fifthViewController = NavigationController(rootViewController: ProfileViewController())
         fifthViewController.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "profileIcon"),

@@ -5,7 +5,7 @@ import UIKit
 
 class TextFieldView: UIView {
     var placeholder: String
-    var imageIsHiden: Bool
+    var buttonIsHiden: Bool
 
     lazy var textField: UITextField = {
         let textField = UITextField()
@@ -19,16 +19,16 @@ class TextFieldView: UIView {
         return textField
     }()
 
-    lazy var passwordImage: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "password")
-        image.isHidden = imageIsHiden
-        return image
+    lazy var passwordButton: UIButton = {
+        var button = UIButton()
+        button.setImage(UIImage(named: "password"), for: .normal)
+        button.isHidden = buttonIsHiden
+        return button
     }()
 
-    required init(placeholder: String, imageIsHiden: Bool = true) {
+    required init(placeholder: String, buttonIsHiden: Bool = true) {
         self.placeholder = placeholder
-        self.imageIsHiden = imageIsHiden
+        self.buttonIsHiden = buttonIsHiden
         super.init(frame: .zero)
         commonInit()
     }
@@ -42,6 +42,7 @@ class TextFieldView: UIView {
         setupStyle()
         addSubviews()
         makeConstraints()
+        addTargets()
     }
 
     private func setupStyle() {
@@ -51,16 +52,25 @@ class TextFieldView: UIView {
 
     private func addSubviews() {
         addSubview(textField)
-        addSubview(passwordImage)
+        addSubview(passwordButton)
     }
 
     private func makeConstraints() {
         textField.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
-        passwordImage.snp.makeConstraints {
+        passwordButton.snp.makeConstraints {
             $0.trailing.equalTo(textField.snp.trailing).inset(15)
             $0.top.bottom.equalToSuperview().inset(7)
         }
+    }
+
+    private func addTargets() {
+        passwordButton.addTarget(self, action: #selector(changeVisible), for: .touchUpInside)
+    }
+
+    @objc
+    private func changeVisible() {
+        textField.isSecureTextEntry.toggle()
     }
 }
