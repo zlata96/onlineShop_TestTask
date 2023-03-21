@@ -6,6 +6,7 @@ import UIKit
 class SignInViewController: UIViewController {
     private var signInView = SignInView()
     private var router = Router()
+    private var userManager = UserManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,16 @@ class SignInViewController: UIViewController {
 
     @objc
     private func signInButtonPressed() {
-        router.setRootViewController(controller: TabBarController())
+        if signInView.emailInputView.textField.text?.isValidEmail == true {
+            userManager.saveUser(
+                email: signInView.emailInputView.textField.text ?? "",
+                firstName: signInView.firstNameInputView.textField.text ?? "",
+                lastName: signInView.lastNameInputView.textField.text ?? "",
+                password: signInView.passwordInputView.textField.text ?? ""
+            )
+            router.setRootViewController(controller: TabBarController())
+        } else {
+            presentAlert(message: "Something wrong with your email")
+        }
     }
 }
