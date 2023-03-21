@@ -17,20 +17,26 @@ class HomeViewController: NavigationController {
         super.viewDidLoad()
         view = homeView
         setupCollectionViews()
-        getSalesProducts()
-        getLatestProducts()
+        fetchProducts()
     }
 
-    private func getSalesProducts() {
+    private func fetchProducts() {
+        let group = DispatchGroup()
+
+        group.enter()
         productsService.getSales { saleProducts in
             self.saleProductsData = saleProducts
-            self.homeView.flashSaleItemsCollectionView.reloadData()
+            group.leave()
         }
-    }
 
-    private func getLatestProducts() {
+        group.enter()
         productsService.getLatestDeals { latestsProducts in
             self.latestProductsData = latestsProducts
+            group.leave()
+        }
+
+        group.notify(queue: .main) {
+            self.homeView.flashSaleItemsCollectionView.reloadData()
             self.homeView.latestItemsCollectionView.reloadData()
         }
     }
