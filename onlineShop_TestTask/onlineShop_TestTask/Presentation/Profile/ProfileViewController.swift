@@ -5,7 +5,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     private var profileView = ProfileView()
-    private var profileCellsViewModel = ProfileCellViewModel.allItems
+    private var profileItems = ProfileCellModel.allItems
+    private var router = Router.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +24,26 @@ class ProfileViewController: UIViewController {
 // MARK: UITableViewDelegate
 
 extension ProfileViewController: UITableViewDelegate {
-    func tableView(_: UITableView, didSelectRowAt _: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Log out
+        if indexPath.row == profileItems.count - 1 {
+            router.setRootViewController(controller: LogInViewController())
+        }
+    }
 }
 
 // MARK: UITableViewDataSource
 
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        profileCellsViewModel.count
+        profileItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withClass: ProfileCell.self)
-        cell.profileItemLabel.text = profileCellsViewModel[indexPath.row].name
-        cell.iconImageView.image = profileCellsViewModel[indexPath.row].iconImage
-        cell.configure(with: profileCellsViewModel[indexPath.row])
+        cell.profileItemLabel.text = profileItems[indexPath.row].name
+        cell.iconImageView.image = profileItems[indexPath.row].iconImage
+        cell.configure(with: profileItems[indexPath.row])
         return cell
     }
 }

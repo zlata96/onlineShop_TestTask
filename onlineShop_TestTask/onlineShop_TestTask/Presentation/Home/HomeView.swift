@@ -80,7 +80,7 @@ class HomeView: UIView {
 
     private func makeConstraints() {
         searchBar.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(120)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(24)
             $0.width.equalTo(262)

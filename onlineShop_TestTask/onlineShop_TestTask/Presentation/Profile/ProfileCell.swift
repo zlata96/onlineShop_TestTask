@@ -96,7 +96,7 @@ class ProfileCell: UITableViewCell {
 }
 
 extension ProfileCell: Configurable {
-    func configure(with viewModel: ProfileCellViewModel) {
+    func configure(with viewModel: ProfileCellModel) {
         profileItemLabel.text = viewModel.name
         iconImageView.image = viewModel.iconImage
         switch viewModel.state {

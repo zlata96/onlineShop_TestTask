@@ -26,7 +26,7 @@ class TabBarController: UITabBarController {
     }
 
     private func setupTabBarItems() {
-        let firstViewController = HomeViewController()
+        let firstViewController = NavigationController(rootViewController: HomeViewController())
         firstViewController.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "homeIcon"),
