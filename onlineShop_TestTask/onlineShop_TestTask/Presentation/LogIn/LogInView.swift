@@ -12,7 +12,7 @@ class LogInView: UIView {
         return label
     }()
 
-    var emailInputView = TextFieldView(placeholder: "First name", buttonIsHiden: true)
+    var emailInputView = TextFieldView(placeholder: "E-mail")
     var passwordInputView: TextFieldView = {
         let view = TextFieldView(placeholder: "Password", buttonIsHiden: false)
         view.textField.textContentType = .password
