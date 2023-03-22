@@ -34,6 +34,7 @@ class ProfileView: UIView {
         tableView.register(cellWithClass: ProfileCell.self)
         tableView.rowHeight = 68
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .profileBackground
         return tableView
     }()
 
@@ -67,7 +68,7 @@ class ProfileView: UIView {
 
     private func makeConstraints() {
         profilePhotoView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(80)
+            $0.top.equalToSuperview().offset(90)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(60)
         }

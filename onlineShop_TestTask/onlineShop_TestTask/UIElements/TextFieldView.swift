@@ -23,6 +23,7 @@ class TextFieldView: UIView {
         var button = UIButton()
         button.setImage(UIImage(named: "password"), for: .normal)
         button.isHidden = buttonIsHiden
+        button.tintColor = .subTitle
         return button
     }()
 
