@@ -3,6 +3,33 @@
 
 import UIKit
 
+private enum TabItem: CaseIterable {
+    case home
+    case favorites
+    case cart
+    case chat
+    case profile
+
+    var title: String {
+        ""
+    }
+
+    var image: UIImage? {
+        switch self {
+        case .home: return UIImage(named: "homeIcon")
+        case .favorites: return UIImage(named: "favoritesIcon")
+        case .cart: return UIImage(named: "cartIcon")
+        case .chat: return UIImage(named: "chatIcon")
+        case .profile: return UIImage(named: "profileIcon")
+        }
+    }
+
+    var selectedImage: UIImage? {
+        // TODO:
+        UIImage()
+    }
+}
+
 class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,41 +52,25 @@ class TabBarController: UITabBarController {
         tabBar.backgroundColor = .white
     }
 
+    private func getTabBarItem(for tabItem: TabItem) -> UITabBarItem {
+        UITabBarItem(title: tabItem.title, image: tabItem.image, selectedImage: tabItem.selectedImage)
+    }
+
     private func setupTabBarItems() {
         let firstViewController = HomeViewController()
-        firstViewController.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "homeIcon"),
-            tag: 0
-        )
+        firstViewController.tabBarItem = getTabBarItem(for: .home)
 
         let secondViewController = SoonViewController()
-        secondViewController.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "favoritesIcon"),
-            tag: 1
-        )
+        secondViewController.tabBarItem = getTabBarItem(for: .favorites)
 
         let thirdViewController = SoonViewController()
-        thirdViewController.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "cartIcon"),
-            tag: 2
-        )
+        thirdViewController.tabBarItem = getTabBarItem(for: .cart)
 
         let fourthViewContrller = SoonViewController()
-        fourthViewContrller.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "chatIcon"),
-            tag: 3
-        )
+        fourthViewContrller.tabBarItem = getTabBarItem(for: .chat)
 
         let fifthViewController = NavigationController(rootViewController: ProfileViewController())
-        fifthViewController.tabBarItem = UITabBarItem(
-            title: "",
-            image: UIImage(named: "profileIcon"),
-            tag: 4
-        )
+        fifthViewController.tabBarItem = getTabBarItem(for: .profile)
 
         viewControllers = [
             firstViewController,

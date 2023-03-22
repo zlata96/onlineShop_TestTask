@@ -5,7 +5,7 @@ import UIKit
 
 class HomeView: UIView {
     private var navigationBar = HomeCustomNavigationBar()
-        
+
     private var searchBar: SearchBarView = {
         let searchBar = SearchBarView()
         searchBar.layer.masksToBounds = true
@@ -82,7 +82,7 @@ class HomeView: UIView {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(50)
         }
-        
+
         searchBar.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom).offset(12)
             $0.centerX.equalToSuperview()

@@ -68,7 +68,7 @@ class ProfileView: UIView {
 
     private func makeConstraints() {
         profilePhotoView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(90)
+            $0.top.equalToSuperview().offset(100)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(60)
         }

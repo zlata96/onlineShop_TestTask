@@ -25,7 +25,9 @@ class HomeViewController: UIViewController {
 
         group.enter()
         productsService.getSales { saleProducts in
-            self.saleProductsData = saleProducts
+            self.saleProductsData.append(contentsOf: saleProducts)
+            // For demo
+            self.saleProductsData.append(contentsOf: saleProducts)
             group.leave()
         }
 
