@@ -6,6 +6,7 @@ import UIKit
 class LogInViewController: UIViewController {
     private var logInView = LogInView()
     private var router = Router.shared
+    private var userManager = UserManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +20,26 @@ class LogInViewController: UIViewController {
 
     @objc
     private func logInnButtonPressed() {
-        if logInView.emailInputView.textField.text?.isValidEmail == true {
-            router.setRootViewController(controller: TabBarController())
+        if let email = logInView.emailInputView.textField.text {
+            if email.isValidEmail == true {
+                if userManager.isUserExist(email: email) {
+                    if let password = logInView.passwordInputView.textField.text {
+                        if password == userManager.getPassword(email: email) {
+                            router.setRootViewController(controller: TabBarController())
+                        } else {
+                            presentAlert(message: "Wrong password")
+                        }
+                    } else {
+                        presentAlert(message: "Please enter password")
+                    }
+                } else {
+                    presentAlert(message: "There is no user with this email")
+                }
+            } else {
+                presentAlert(message: "Something wrong with your email")
+            }
         } else {
-            presentAlert(message: "Something wrong with your email")
+            presentAlert(message: "Please enter e-mail")
         }
     }
 }

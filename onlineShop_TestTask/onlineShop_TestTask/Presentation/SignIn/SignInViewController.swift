@@ -27,14 +27,18 @@ class SignInViewController: UIViewController {
 
     @objc
     private func signInButtonPressed() {
-        if signInView.emailInputView.textField.text?.isValidEmail == true {
-            userManager.saveUser(
-                email: signInView.emailInputView.textField.text ?? "",
-                firstName: signInView.firstNameInputView.textField.text ?? "",
-                lastName: signInView.lastNameInputView.textField.text ?? "",
-                password: signInView.passwordInputView.textField.text ?? ""
-            )
-            router.setRootViewController(controller: TabBarController())
+        if let email = signInView.emailInputView.textField.text {
+            if email.isValidEmail == true && userManager.isUserExist(email: email) == false {
+                userManager.saveUser(
+                    email: signInView.emailInputView.textField.text ?? "",
+                    firstName: signInView.firstNameInputView.textField.text ?? "",
+                    lastName: signInView.lastNameInputView.textField.text ?? "",
+                    password: signInView.passwordInputView.textField.text ?? ""
+                )
+                router.setRootViewController(controller: TabBarController())
+            } else {
+                presentAlert(message: "With user already exist")
+                }
         } else {
             presentAlert(message: "Something wrong with your email")
         }
