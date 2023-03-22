@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = homeView
-        setupNavigationBar()
         setupCollectionViews()
         fetchProducts()
     }
@@ -53,12 +52,6 @@ class HomeViewController: UIViewController {
         homeView.productCategoriesCollectionView.tag = 1
         homeView.latestItemsCollectionView.tag = 2
         homeView.flashSaleItemsCollectionView.tag = 3
-    }
-
-    private func setupNavigationBar() {
-        navigationItem.leftBarButtonItem = nil
-        navigationItem.rightBarButtonItem = nil
-        navigationItem.titleView = HomeCustomNavigationBar()
     }
 }
 

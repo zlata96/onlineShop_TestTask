@@ -25,7 +25,7 @@
 		CEE56BB029C1C6BE00A9C92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */; };
 		CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */; };
 		CEE56BB529C1CED000A9C92E /* SoonViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB429C1CED000A9C92E /* SoonViewControllers.swift */; };
-		CEE56BBA29C304DD00A9C92E /* ProfileItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */; };
+		CEE56BBA29C304DD00A9C92E /* ProfileCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB929C304DD00A9C92E /* ProfileCellModel.swift */; };
 		CEE56BBF29C34D6900A9C92E /* BlueButton .swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BBE29C34D6900A9C92E /* BlueButton .swift */; };
 		CEE56BC129C3543E00A9C92E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BC029C3543E00A9C92E /* NavigationController.swift */; };
 		CEE56BC329C355F800A9C92E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BC229C355F800A9C92E /* HomeView.swift */; };
@@ -79,7 +79,7 @@
 		CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEE56BB429C1CED000A9C92E /* SoonViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoonViewControllers.swift; sourceTree = "<group>"; };
-		CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemsViewModel.swift; sourceTree = "<group>"; };
+		CEE56BB929C304DD00A9C92E /* ProfileCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellModel.swift; sourceTree = "<group>"; };
 		CEE56BBE29C34D6900A9C92E /* BlueButton .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlueButton .swift"; sourceTree = "<group>"; };
 		CEE56BC029C3543E00A9C92E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CEE56BC229C355F800A9C92E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 		CEE56BB129C1CAF100A9C92E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */,
 				CEE56BC229C355F800A9C92E /* HomeView.swift */,
+				CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */,
 				CEE56BC829C4980600A9C92E /* ProductItems */,
 				CE13E45829C4FC5800913CC2 /* ProductCategoriesCollectionViewModel.swift */,
 			);
@@ -254,8 +254,8 @@
 		CEEC199029BCFE0B000FF930 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
-				CEEC197A29BB73D6000FF930 /* LogInViewController.swift */,
 				CEEC197C29BB7AAA000FF930 /* LogInView.swift */,
+				CEEC197A29BB73D6000FF930 /* LogInViewController.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -274,8 +274,8 @@
 			children = (
 				CEEC199D29BF50D7000FF930 /* ProfileView.swift */,
 				CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */,
-				CEE56BB929C304DD00A9C92E /* ProfileItemsViewModel.swift */,
 				CEEC19A129BF5164000FF930 /* ProfileCell.swift */,
+				CEE56BB929C304DD00A9C92E /* ProfileCellModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -291,8 +291,8 @@
 		F1CC7F0C29C76925008D686C /* Soon */ = {
 			isa = PBXGroup;
 			children = (
-				CEE56BB429C1CED000A9C92E /* SoonViewControllers.swift */,
 				F1CC7F0D29C7693A008D686C /* SoonView.swift */,
+				CEE56BB429C1CED000A9C92E /* SoonViewControllers.swift */,
 			);
 			path = Soon;
 			sourceTree = "<group>";
@@ -464,7 +464,7 @@
 				CEE56BB029C1C6BE00A9C92E /* TabBarController.swift in Sources */,
 				CE13E46E29C9B68100913CC2 /* UserManager.swift in Sources */,
 				F1CC7F0E29C7693A008D686C /* SoonView.swift in Sources */,
-				CEE56BBA29C304DD00A9C92E /* ProfileItemsViewModel.swift in Sources */,
+				CEE56BBA29C304DD00A9C92E /* ProfileCellModel.swift in Sources */,
 				CE13E45F29C50BEE00913CC2 /* SaleProducts.swift in Sources */,
 				CEE56BB529C1CED000A9C92E /* SoonViewControllers.swift in Sources */,
 				CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */,

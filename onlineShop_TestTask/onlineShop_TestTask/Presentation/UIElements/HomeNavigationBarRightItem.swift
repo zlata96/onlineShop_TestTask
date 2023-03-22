@@ -14,9 +14,10 @@ class HomeNavigationBarRightItem: UIView {
     var locationButton: UIButton = {
         let button = UIButton()
         button.setTitle("Location", for: .normal)
+        button.setTitleColor(.mainText, for: .normal)
         button.setImage(UIImage(named: "pointer"), for: .normal)
         button.backgroundColor = .clear
-        button.contentMode = .right
+        button.contentMode = .left
         return button
     }()
 

@@ -65,10 +65,10 @@ class HomeCustomNavigationBar: UIView {
         }
 
         rightView.snp.makeConstraints {
-            $0.trailing.equalToSuperview().offset(16)
+            $0.trailing.equalToSuperview().inset(16)
             $0.height.equalTo(50)
             $0.width.equalTo(40)
-            $0.centerY.equalToSuperview()
+            $0.centerY.equalToSuperview().offset(8)
         }
     }
 }

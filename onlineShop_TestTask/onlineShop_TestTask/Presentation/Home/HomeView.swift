@@ -4,13 +4,10 @@
 import UIKit
 
 class HomeView: UIView {
+    private var navigationBar = HomeCustomNavigationBar()
+        
     private var searchBar: SearchBarView = {
         let searchBar = SearchBarView()
-//        searchBar.placeholder = "What are you looking for?"
-//        searchBar.searchTextField.font = UIFont.regular10
-//        searchBar.searchTextField.textAlignment = .center
-//        searchBar.layer.cornerRadius = 12
-//        searchBar.barTintColor = .searchBarBackground
         searchBar.layer.masksToBounds = true
         return searchBar
     }()
@@ -70,6 +67,7 @@ class HomeView: UIView {
     }
 
     private func addSubviews() {
+        addSubview(navigationBar)
         addSubview(searchBar)
         addSubview(productCategoriesCollectionView)
         addSubview(firstCategoryView)
@@ -79,8 +77,14 @@ class HomeView: UIView {
     }
 
     private func makeConstraints() {
+        navigationBar.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide.snp.top)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(50)
+        }
+        
         searchBar.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(120)
+            $0.top.equalTo(navigationBar.snp.bottom).offset(12)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(24)
             $0.width.equalTo(262)
