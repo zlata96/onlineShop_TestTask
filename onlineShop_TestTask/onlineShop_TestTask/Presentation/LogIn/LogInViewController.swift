@@ -16,6 +16,7 @@ class LogInViewController: UIViewController {
 
     private func addTargets() {
         logInView.loginButton.button.addTarget(self, action: #selector(logInnButtonPressed), for: .touchUpInside)
+        logInView.haveNoAccountButton.addTarget(self, action: #selector(haveNoAccountButtonPressed), for: .touchUpInside)
     }
 
     @objc
@@ -41,5 +42,10 @@ class LogInViewController: UIViewController {
         } else {
             presentAlert(message: "Please enter e-mail")
         }
+    }
+
+    @objc
+    private func haveNoAccountButtonPressed() {
+        router.setRootViewController(controller: SignInViewController())
     }
 }
