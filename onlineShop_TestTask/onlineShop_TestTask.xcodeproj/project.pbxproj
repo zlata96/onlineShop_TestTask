@@ -51,7 +51,7 @@
 		CEEC199E29BF50D7000FF930 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199D29BF50D7000FF930 /* ProfileView.swift */; };
 		CEEC19A029BF50E6000FF930 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */; };
 		CEEC19A229BF5164000FF930 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC19A129BF5164000FF930 /* ProfileCell.swift */; };
-		F1CC7F0B29C766B2008D686C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC7F0A29C766B2008D686C /* Protocols.swift */; };
+		F1CC7F0B29C766B2008D686C /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC7F0A29C766B2008D686C /* Configurable.swift */; };
 		F1CC7F0E29C7693A008D686C /* SoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC7F0D29C7693A008D686C /* SoonView.swift */; };
 		F1D6ED5B29C742FC009957A5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F1D6ED5A29C742FC009957A5 /* Kingfisher */; };
 		F1D6ED5E29C744F8009957A5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = F1D6ED5D29C744F8009957A5 /* Moya */; };
@@ -59,6 +59,7 @@
 		F1D6ED6429C745ED009957A5 /* ProductsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6ED6329C745ED009957A5 /* ProductsAPI.swift */; };
 		F1D6ED6629C745F7009957A5 /* ProductsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6ED6529C745F7009957A5 /* ProductsProtocol.swift */; };
 		F1D6ED6829C745FC009957A5 /* ProductsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D6ED6729C745FC009957A5 /* ProductsService.swift */; };
+		F1F840E529CB636F00ABF760 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F840E429CB636F00ABF760 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,12 +106,13 @@
 		CEEC199D29BF50D7000FF930 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CEEC199F29BF50E6000FF930 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CEEC19A129BF5164000FF930 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
-		F1CC7F0A29C766B2008D686C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		F1CC7F0A29C766B2008D686C /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		F1CC7F0D29C7693A008D686C /* SoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoonView.swift; sourceTree = "<group>"; };
 		F1D6ED6129C745CB009957A5 /* BaseNetworkTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkTarget.swift; sourceTree = "<group>"; };
 		F1D6ED6329C745ED009957A5 /* ProductsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAPI.swift; sourceTree = "<group>"; };
 		F1D6ED6529C745F7009957A5 /* ProductsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsProtocol.swift; sourceTree = "<group>"; };
 		F1D6ED6729C745FC009957A5 /* ProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsService.swift; sourceTree = "<group>"; };
+		F1F840E429CB636F00ABF760 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,14 +142,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		CEE56BB829C304AE00A9C92E /* Model */ = {
+		CEE56BB829C304AE00A9C92E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CE13E45C29C50BE200913CC2 /* LatestDeals.swift */,
 				CE13E45E29C50BEE00913CC2 /* SaleProducts.swift */,
 				CE13E46B29C9B41F00913CC2 /* User.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CEE56BC829C4980600A9C92E /* ProductItems */ = {
@@ -182,12 +184,10 @@
 				F1D6ED5F29C745A8009957A5 /* BusinessLogic */,
 				F1D6ED5829C73E69009957A5 /* Presentation */,
 				CEEC198629BCECC7000FF930 /* Helpers */,
-				CEEC198529BCECA7000FF930 /* UIElements */,
-				CEE56BB829C304AE00A9C92E /* Model */,
-				CEEC196F29BB6BB0000FF930 /* Assets.xcassets */,
+				CEE56BB829C304AE00A9C92E /* Models */,
 				F1CC7F0929C766A1008D686C /* Protocols */,
-				CE13E46429C8D75400913CC2 /* Router.swift */,
-				CE13E46D29C9B68100913CC2 /* UserManager.swift */,
+				CEEC196F29BB6BB0000FF930 /* Assets.xcassets */,
+				F1F840E429CB636F00ABF760 /* Colors.xcassets */,
 				CEEC196629BB6BA9000FF930 /* AppDelegate.swift */,
 				CEEC197129BB6BB0000FF930 /* LaunchScreen.storyboard */,
 				CEEC197429BB6BB0000FF930 /* Info.plist */,
@@ -283,7 +283,7 @@
 		F1CC7F0929C766A1008D686C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				F1CC7F0A29C766B2008D686C /* Protocols.swift */,
+				F1CC7F0A29C766B2008D686C /* Configurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -300,6 +300,7 @@
 		F1D6ED5829C73E69009957A5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CEEC198529BCECA7000FF930 /* UIElements */,
 				F1CC7F0C29C76925008D686C /* Soon */,
 				CEE56BB129C1CAF100A9C92E /* Home */,
 				CEEC199C29BF508B000FF930 /* Profile */,
@@ -313,6 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				F1D6ED6029C745AF009957A5 /* Network Layer */,
+				CE13E46D29C9B68100913CC2 /* UserManager.swift */,
+				CE13E46429C8D75400913CC2 /* Router.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F840E529CB636F00ABF760 /* Colors.xcassets in Resources */,
 				CEEC198C29BCF897000FF930 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				CEEC197329BB6BB0000FF930 /* LaunchScreen.storyboard in Resources */,
 				CEEC198A29BCF88D000FF930 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
@@ -475,7 +479,7 @@
 				CEEC197B29BB73D6000FF930 /* LogInViewController.swift in Sources */,
 				CEEC198F29BCF9CE000FF930 /* Fonts.swift in Sources */,
 				CE13E46529C8D75400913CC2 /* Router.swift in Sources */,
-				F1CC7F0B29C766B2008D686C /* Protocols.swift in Sources */,
+				F1CC7F0B29C766B2008D686C /* Configurable.swift in Sources */,
 				CE81ECF829C9F91500A1AB42 /* String+Extension.swift in Sources */,
 				CEEC199329BCFE3C000FF930 /* SignInView.swift in Sources */,
 				CEEC199529BCFE48000FF930 /* SignInViewController.swift in Sources */,
