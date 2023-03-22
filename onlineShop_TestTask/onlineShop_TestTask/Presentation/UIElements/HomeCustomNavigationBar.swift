@@ -12,13 +12,24 @@ class HomeCustomNavigationBar: UIView {
 
     var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Trade by bata"
-        label.font = .bold26
-        // label.text?.textColorChange(For: "Trade by bata", into: .button ?? .white, from: 9, to: 4)
+        label.labelColorChange(
+            for: "Trade by bata",
+            color: .button ?? .clear,
+            from: 9,
+            to: 4,
+            font: .bold26 ?? UIFont.systemFont(ofSize: 26)
+        )
         return label
     }()
 
-    var rightView = HomeNavigationBarRightItem()
+    var profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "accountPhoto")
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+
+    var locationButton = LocationButton()
 
     var contentView: UIView = {
         let view = UIView()
@@ -45,7 +56,8 @@ class HomeCustomNavigationBar: UIView {
         addSubview(contentView)
         contentView.addSubview(leftImageView)
         contentView.addSubview(titleLabel)
-        contentView.addSubview(rightView)
+        contentView.addSubview(profileImageView)
+        contentView.addSubview(locationButton)
     }
 
     private func makeConstraints() {
@@ -64,11 +76,17 @@ class HomeCustomNavigationBar: UIView {
             $0.center.equalToSuperview()
         }
 
-        rightView.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(16)
-            $0.height.equalTo(50)
-            $0.width.equalTo(40)
-            $0.centerY.equalToSuperview().offset(8)
+        profileImageView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(12)
+            $0.trailing.equalToSuperview().inset(20)
+            $0.size.equalTo(30)
+        }
+
+        locationButton.snp.makeConstraints {
+            $0.top.equalTo(profileImageView.snp.bottom).offset(10)
+            $0.centerX.equalTo(profileImageView.snp.centerX)
+            $0.height.equalTo(8)
+            $0.width.equalTo(44)
         }
     }
 }

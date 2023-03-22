@@ -19,8 +19,9 @@
 		CE81ECF829C9F91500A1AB42 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81ECF729C9F91500A1AB42 /* String+Extension.swift */; };
 		CE81ECFA29C9FBD000A1AB42 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81ECF929C9FBD000A1AB42 /* UIViewController+Extension.swift */; };
 		CE81ECFC29CAE1D600A1AB42 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81ECFB29CAE1D600A1AB42 /* SearchBarView.swift */; };
-		CE81ECFE29CAE83D00A1AB42 /* HomeNavigationBarRightItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81ECFD29CAE83D00A1AB42 /* HomeNavigationBarRightItem.swift */; };
 		CE81ED0229CB461600A1AB42 /* HomeCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81ED0129CB461600A1AB42 /* HomeCustomNavigationBar.swift */; };
+		CE81ED0429CB86FF00A1AB42 /* LocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81ED0329CB86FF00A1AB42 /* LocationButton.swift */; };
+		CE81ED0629CB8EB800A1AB42 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81ED0529CB8EB800A1AB42 /* UILabel+Extension.swift */; };
 		CEE56BAE29C0BE1D00A9C92E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAD29C0BE1D00A9C92E /* UITableView+Extension.swift */; };
 		CEE56BB029C1C6BE00A9C92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */; };
 		CEE56BB329C1CB0B00A9C92E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */; };
@@ -73,8 +74,9 @@
 		CE81ECF729C9F91500A1AB42 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		CE81ECF929C9FBD000A1AB42 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		CE81ECFB29CAE1D600A1AB42 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
-		CE81ECFD29CAE83D00A1AB42 /* HomeNavigationBarRightItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBarRightItem.swift; sourceTree = "<group>"; };
 		CE81ED0129CB461600A1AB42 /* HomeCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomNavigationBar.swift; sourceTree = "<group>"; };
+		CE81ED0329CB86FF00A1AB42 /* LocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationButton.swift; sourceTree = "<group>"; };
+		CE81ED0529CB8EB800A1AB42 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		CEE56BAD29C0BE1D00A9C92E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CEE56BB229C1CB0B00A9C92E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -203,7 +205,7 @@
 				CEE56BAF29C1C6BE00A9C92E /* TabBarController.swift */,
 				CEEC199829BD08BF000FF930 /* SignInWithView.swift */,
 				CE81ECFB29CAE1D600A1AB42 /* SearchBarView.swift */,
-				CE81ECFD29CAE83D00A1AB42 /* HomeNavigationBarRightItem.swift */,
+				CE81ED0329CB86FF00A1AB42 /* LocationButton.swift */,
 				CE81ED0129CB461600A1AB42 /* HomeCustomNavigationBar.swift */,
 				CEE56BBE29C34D6900A9C92E /* BlueButton .swift */,
 				CEE56BC029C3543E00A9C92E /* NavigationController.swift */,
@@ -226,6 +228,7 @@
 			children = (
 				CEEC198029BB8173000FF930 /* Colors+Extension.swift */,
 				CE81ECF729C9F91500A1AB42 /* String+Extension.swift */,
+				CE81ED0529CB8EB800A1AB42 /* UILabel+Extension.swift */,
 				CEE56BAD29C0BE1D00A9C92E /* UITableView+Extension.swift */,
 				CEE56BCB29C4CB0500A9C92E /* UICollectionView+Extension.swift */,
 				CEEC199629BD0459000FF930 /* UIButton+Extension.swift */,
@@ -476,6 +479,8 @@
 				CEEC199E29BF50D7000FF930 /* ProfileView.swift in Sources */,
 				CEEC197F29BB7D0A000FF930 /* TextFieldView.swift in Sources */,
 				F1D6ED6629C745F7009957A5 /* ProductsProtocol.swift in Sources */,
+				CE81ED0429CB86FF00A1AB42 /* LocationButton.swift in Sources */,
+				CE81ED0629CB8EB800A1AB42 /* UILabel+Extension.swift in Sources */,
 				CEEC197B29BB73D6000FF930 /* LogInViewController.swift in Sources */,
 				CEEC198F29BCF9CE000FF930 /* Fonts.swift in Sources */,
 				CE13E46529C8D75400913CC2 /* Router.swift in Sources */,
@@ -491,7 +496,6 @@
 				CE13E45B29C5011700913CC2 /* SaleProductsCollectionViewCell.swift in Sources */,
 				F1D6ED6829C745FC009957A5 /* ProductsService.swift in Sources */,
 				CEEC198129BB8173000FF930 /* Colors+Extension.swift in Sources */,
-				CE81ECFE29CAE83D00A1AB42 /* HomeNavigationBarRightItem.swift in Sources */,
 				CE81ED0229CB461600A1AB42 /* HomeCustomNavigationBar.swift in Sources */,
 				CEE56BC329C355F800A9C92E /* HomeView.swift in Sources */,
 				CEE56BBF29C34D6900A9C92E /* BlueButton .swift in Sources */,
