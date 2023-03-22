@@ -4,6 +4,14 @@
 import UIKit
 
 class ProfileView: UIView {
+    var titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Profile"
+        label.font = .bold16
+        label.textColor = .mainText
+        return label
+    }()
+
     private var profilePhotoView: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "accountPhoto")
@@ -59,6 +67,7 @@ class ProfileView: UIView {
     }
 
     private func addSubviews() {
+        addSubview(titleLabel)
         addSubview(profilePhotoView)
         addSubview(changePhotoButton)
         addSubview(userNameLabel)
@@ -67,8 +76,14 @@ class ProfileView: UIView {
     }
 
     private func makeConstraints() {
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().offset(50)
+            $0.height.equalTo(32)
+        }
+
         profilePhotoView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(100)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(10)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(60)
         }

@@ -25,8 +25,13 @@ private enum TabItem: CaseIterable {
     }
 
     var selectedImage: UIImage? {
-        // TODO:
-        UIImage()
+        switch self {
+        case .home: return UIImage(named: "selectedHome")
+        case .favorites: return UIImage(named: "selectedFavourites")
+        case .cart: return UIImage(named: "selectedCart")
+        case .chat: return UIImage(named: "selectedChat")
+        case .profile: return UIImage(named: "selectedProfile")
+        }
     }
 }
 
@@ -42,7 +47,7 @@ class TabBarController: UITabBarController {
     }
 
     private func setupStyleTabBar() {
-        tabBar.tintColor = .selectedTabBarItem
+        // tabBar.tintColor = .selectedTabBarItem
         tabBar.unselectedItemTintColor = .subTitle
         tabBar.tintAdjustmentMode = .normal
         tabBar.layer.masksToBounds = true

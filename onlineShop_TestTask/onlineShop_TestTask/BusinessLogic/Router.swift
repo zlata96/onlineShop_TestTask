@@ -40,6 +40,11 @@ class Router {
 
     private var isUserSignIn: Bool {
         // TODO:
+//        if !UserDefaults.standard.bool(forKey: "hasBeenLaunchedBeforeFlag") {
+//            UserDefaults.standard.set(false, forKey: "hasBeenSignInBeforeFlag")
+//            UserDefaults.standard.synchronize()
+//            return false
+//        }
         true
     }
 
