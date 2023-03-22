@@ -40,11 +40,16 @@ class Router {
 
     private var isUserSignIn: Bool {
         // TODO:
-        false
+        true
     }
 
     private var isAppAlreadyLaunchedOnce: Bool {
         // TODO:
-        false
+        if !UserDefaults.standard.bool(forKey: "hasBeenLaunchedBeforeFlag") {
+            UserDefaults.standard.set(true, forKey: "hasBeenLaunchedBeforeFlag")
+            UserDefaults.standard.synchronize()
+            return true
+        }
+        return false
     }
 }
