@@ -6,7 +6,7 @@ import UIKit
 class ProfileView: UIView {
     var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Profile"
+        label.text = Texts.profile
         label.font = .bold16
         label.textColor = .mainText
         return label
@@ -21,7 +21,7 @@ class ProfileView: UIView {
 
     private var changePhotoButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Change photo", for: .normal)
+        button.setTitle(Texts.changePhoto, for: .normal)
         button.setTitleColor(.subTitle, for: .normal)
         button.titleLabel?.font = .regular8
         button.titleLabel?.textAlignment = .center
@@ -30,12 +30,12 @@ class ProfileView: UIView {
 
     private var userNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Satria Adhi Pradana"
+        label.text = Texts.profileName
         label.font = .bold14
         return label
     }()
 
-    private var uploadButton = BlueButton(text: "Upload item", withoutImage: false)
+    private var uploadButton = BlueButton(text: Texts.uploadItem, withoutImage: false)
 
     var tableView: UITableView = {
         let tableView = UITableView()

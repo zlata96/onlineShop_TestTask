@@ -6,15 +6,15 @@ import UIKit
 class LogInView: UIView {
     var mainLabel: UILabel = {
         let label = UILabel()
-        label.text = "Welcome back"
+        label.text = Texts.welcome
         label.textColor = .mainText
         label.font = .bold26
         return label
     }()
 
-    var emailInputView = TextFieldView(placeholder: "E-mail")
+    var emailInputView = TextFieldView(placeholder: Texts.email)
     var passwordInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Password", buttonIsHiden: false)
+        let view = TextFieldView(placeholder: Texts.password, buttonIsHiden: false)
         view.textField.textContentType = .password
         view.textField.isSecureTextEntry = true
         return view
@@ -22,14 +22,14 @@ class LogInView: UIView {
 
     var haveNoAccountButton: UIButton = {
         let button = UIButton()
-        button.buttonTextColorChange(For: "Still have no account? Sign in", into: .button ?? .black, from: 23, to: 7)
+        button.buttonTextColorChange(For: Texts.haveNoAccount as NSString, into: .button ?? .black, from: 23, to: 7)
         button.titleLabel?.textColor = .mainText
         button.titleLabel?.font = .regular10
         button.backgroundColor = .clear
         return button
     }()
 
-    var loginButton = BlueButton(text: "Login")
+    var loginButton = BlueButton(text: Texts.login)
 
     override init(frame: CGRect) {
         super.init(frame: frame)

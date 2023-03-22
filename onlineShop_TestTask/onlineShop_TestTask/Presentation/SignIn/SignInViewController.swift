@@ -37,10 +37,10 @@ class SignInViewController: UIViewController {
                 )
                 router.setRootViewController(controller: TabBarController())
             } else {
-                presentAlert(message: "With user already exist")
+                presentAlert(message: Texts.userExist)
             }
         } else {
-            presentAlert(message: "Something wrong with your email")
+            presentAlert(message: Texts.wrongEmail)
         }
     }
 }

@@ -13,7 +13,7 @@ class LocationButton: UIButton {
 
     var locationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Location"
+        label.text = Texts.location
         label.font = .regular8
         label.textColor = .mainText
         return label

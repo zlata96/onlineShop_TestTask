@@ -11,7 +11,7 @@ class SearchBarView: UIView {
         textField.backgroundColor = .searchBarBackground
         textField.textAlignment = .center
         textField.attributedPlaceholder = NSAttributedString(
-            string: "What are you loking for?",
+            string: Texts.searchBarPlaceholder,
             attributes: [.foregroundColor: UIColor.textFieldText ?? .clear]
         )
         return textField

@@ -8,7 +8,6 @@ class ProductCategoriesCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .regular8
         label.textColor = .subTitle
-        label.text = "productName"
         return label
     }()
 

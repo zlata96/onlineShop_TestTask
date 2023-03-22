@@ -28,19 +28,19 @@ class LogInViewController: UIViewController {
                         if password == userManager.getPassword(email: email) {
                             router.setRootViewController(controller: TabBarController())
                         } else {
-                            presentAlert(message: "Wrong password")
+                            presentAlert(message: Texts.wrongPassword)
                         }
                     } else {
-                        presentAlert(message: "Please enter password")
+                        presentAlert(message: Texts.enterPassword)
                     }
                 } else {
-                    presentAlert(message: "There is no user with this email")
+                    presentAlert(message: Texts.noUser)
                 }
             } else {
-                presentAlert(message: "Something wrong with your email")
+                presentAlert(message: Texts.wrongEmail)
             }
         } else {
-            presentAlert(message: "Please enter e-mail")
+            presentAlert(message: Texts.enterEmail)
         }
     }
 

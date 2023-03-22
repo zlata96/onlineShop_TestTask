@@ -6,51 +6,51 @@ import UIKit
 class SignInView: UIView {
     var mainLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sign in"
+        label.text = Texts.signIn
         label.textColor = .mainText
         label.font = .bold26
         return label
     }()
 
     var firstNameInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "First name")
+        let view = TextFieldView(placeholder: Texts.firstName)
         view.textField.textContentType = .givenName
         return view
     }()
 
     var lastNameInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Last name")
+        let view = TextFieldView(placeholder: Texts.lastName)
         view.textField.textContentType = .familyName
         return view
     }()
 
     var emailInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Email")
+        let view = TextFieldView(placeholder: Texts.email)
         view.textField.textContentType = .emailAddress
         return view
     }()
 
     var passwordInputView: TextFieldView = {
-        let view = TextFieldView(placeholder: "Password", buttonIsHiden: false)
+        let view = TextFieldView(placeholder: Texts.password, buttonIsHiden: false)
         view.textField.textContentType = .newPassword
         view.textField.isSecureTextEntry = true
         return view
     }()
 
-    var signInButton = BlueButton(text: "Sign in")
+    var signInButton = BlueButton(text: Texts.signIn)
 
     var alreadyLoginButton: UIButton = {
         let button = UIButton()
-        button.buttonTextColorChange(For: "Already have an account? Log in", into: .button ?? .black, from: 25, to: 6)
+        button.buttonTextColorChange(For: Texts.haveAccount as NSString, into: .button ?? .black, from: 25, to: 6)
         button.titleLabel?.textColor = .mainText
         button.titleLabel?.font = .regular10
         button.backgroundColor = .clear
         return button
     }()
 
-    var signInWithGoogleView = SignInWithView(with: "Sign in with Google", iconImage: UIImage(named: "google"))
+    var signInWithGoogleView = SignInWithView(with: Texts.withGoogle, iconImage: UIImage(named: "google"))
 
-    var signInWithAppleView = SignInWithView(with: "Sign in with Apple", iconImage: UIImage(named: "apple"))
+    var signInWithAppleView = SignInWithView(with: Texts.withApple, iconImage: UIImage(named: "apple"))
 
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -1,6 +1,7 @@
 // ProfileCell.swift
 // onlineSHop_TestTask. Created by Zlata Guseva.
 
+import SnapKit
 import UIKit
 
 enum ProfileCellState {

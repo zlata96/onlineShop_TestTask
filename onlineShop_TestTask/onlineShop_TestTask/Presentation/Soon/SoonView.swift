@@ -6,7 +6,7 @@ import UIKit
 class SoonView: UIView {
     private var soonLabel: UILabel = {
         let label = UILabel()
-        label.text = "SOON"
+        label.text = Texts.soon
         label.font = .bold20
         label.textColor = .mainText
         return label

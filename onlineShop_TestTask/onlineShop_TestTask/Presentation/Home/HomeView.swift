@@ -22,7 +22,7 @@ class HomeView: UIView {
         return collectionView
     }()
 
-    private var firstCategoryView = ProductCategoryView(categoryName: "Latest")
+    private var firstCategoryView = ProductCategoryView(categoryName: Texts.latest)
 
     var latestItemsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,7 +34,7 @@ class HomeView: UIView {
         return collectionView
     }()
 
-    private var secondCategoryView = ProductCategoryView(categoryName: "Flash Sale")
+    private var secondCategoryView = ProductCategoryView(categoryName: Texts.flashSale)
 
     var flashSaleItemsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

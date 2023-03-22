@@ -47,11 +47,9 @@ class TabBarController: UITabBarController {
     }
 
     private func setupStyleTabBar() {
-        // tabBar.tintColor = .selectedTabBarItem
         tabBar.unselectedItemTintColor = .subTitle
         tabBar.tintAdjustmentMode = .normal
         tabBar.layer.masksToBounds = true
-        tabBar.isTranslucent = true
         tabBar.layer.cornerRadius = 30
         tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tabBar.backgroundColor = .white
@@ -82,7 +80,7 @@ class TabBarController: UITabBarController {
             secondViewController,
             thirdViewController,
             fourthViewContrller,
-            fifthViewController,
+            fifthViewController
         ]
         selectedIndex = 0
     }

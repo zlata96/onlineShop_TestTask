@@ -15,7 +15,7 @@ class ProductCategoryView: UIView {
 
     var viewAllButton: UIButton = {
         let button = UIButton()
-        button.setTitle("View all", for: .normal)
+        button.setTitle(Texts.viewAll, for: .normal)
         button.setTitleColor(.subTitle, for: .normal)
         button.backgroundColor = .clear
         button.titleLabel?.font = .regular8

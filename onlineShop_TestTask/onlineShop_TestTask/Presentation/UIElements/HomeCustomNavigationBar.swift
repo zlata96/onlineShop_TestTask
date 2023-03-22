@@ -13,7 +13,7 @@ class HomeCustomNavigationBar: UIView {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.labelColorChange(
-            for: "Trade by bata",
+            for: Texts.homeTitle,
             color: .button ?? .clear,
             from: 9,
             to: 4,
