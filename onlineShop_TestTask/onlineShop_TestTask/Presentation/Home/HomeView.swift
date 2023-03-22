@@ -4,13 +4,13 @@
 import UIKit
 
 class HomeView: UIView {
-    private var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.placeholder = "What are you looking for?"
-        searchBar.searchTextField.font = UIFont.regular10
-        searchBar.searchTextField.textAlignment = .center
-        searchBar.layer.cornerRadius = 12
-        searchBar.barTintColor = .searchBarBackground
+    private var searchBar: SearchBarView = {
+        let searchBar = SearchBarView()
+//        searchBar.placeholder = "What are you looking for?"
+//        searchBar.searchTextField.font = UIFont.regular10
+//        searchBar.searchTextField.textAlignment = .center
+//        searchBar.layer.cornerRadius = 12
+//        searchBar.barTintColor = .searchBarBackground
         searchBar.layer.masksToBounds = true
         return searchBar
     }()
