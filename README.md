@@ -5,7 +5,7 @@
 Core:
 -   [SnapKit](https://github.com/SnapKit/SnapKit)
 -   [Realm](https://github.com/realm/realm-swift)
--   [Moya](https://github.com/realm/realm-swift)
+-   [Moya](https://github.com/Moya/Moya)
 
 Others:
 -   [Swift Package Manager](https://github.com/apple/swift-package-manager)
