@@ -21,7 +21,7 @@ class TextFieldView: UIView {
 
     lazy var passwordButton: UIButton = {
         var button = UIButton()
-        button.setImage(UIImage(named: "password"), for: .normal)
+        button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         button.isHidden = buttonIsHiden
         button.tintColor = .subTitle
         return button
@@ -73,5 +73,10 @@ class TextFieldView: UIView {
     @objc
     private func changeVisible() {
         textField.isSecureTextEntry.toggle()
+        var image = UIImage()
+        image = textField.isSecureTextEntry
+            ? UIImage(systemName: "eye.slash") ?? UIImage()
+            : UIImage(systemName: "eye") ?? UIImage()
+        passwordButton.setImage(image, for: .normal)
     }
 }
