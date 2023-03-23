@@ -19,29 +19,28 @@ class LogInViewController: UIViewController {
         logInView.haveNoAccountButton.addTarget(self, action: #selector(haveNoAccountButtonPressed), for: .touchUpInside)
     }
 
-    @objc
-    private func logInnButtonPressed() {
-        if let email = logInView.emailInputView.textField.text {
-            if email.isValidEmail == true {
-                if userManager.isUserExist(email: email) {
-                    if let password = logInView.passwordInputView.textField.text {
-                        if password == userManager.getPassword(email: email) {
-                            router.setRootViewController(controller: TabBarController())
-                        } else {
-                            presentAlert(message: Texts.wrongPassword)
-                        }
-                    } else {
-                        presentAlert(message: Texts.enterPassword)
-                    }
-                } else {
-                    presentAlert(message: Texts.noUser)
-                }
-            } else {
-                presentAlert(message: Texts.wrongEmail)
-            }
-        } else {
+    @objc private func logInnButtonPressed() {
+        guard let email = logInView.emailInputView.textField.text else {
             presentAlert(message: Texts.enterEmail)
+            return
         }
+        guard email.isValidEmail else {
+            presentAlert(message: Texts.wrongEmail)
+            return
+        }
+        guard userManager.isUserExist(email: email) else {
+            presentAlert(message: Texts.noUser)
+            return
+        }
+        guard let password = logInView.passwordInputView.textField.text else {
+            presentAlert(message: Texts.enterPassword)
+            return
+        }
+        guard password == userManager.getPassword(email: email) else {
+            presentAlert(message: Texts.wrongPassword)
+            return
+        }
+        router.setRootViewController(controller: TabBarController())
     }
 
     @objc
