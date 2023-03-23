@@ -42,7 +42,7 @@ class ProfileView: UIView {
         tableView.register(cellWithClass: ProfileCell.self)
         tableView.rowHeight = 68
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .profileBackground
+        tableView.backgroundColor = .mainBackground
         return tableView
     }()
 
@@ -63,7 +63,7 @@ class ProfileView: UIView {
     }
 
     private func setupStyle() {
-        backgroundColor = .profileBackground
+        backgroundColor = .mainBackground
     }
 
     private func addSubviews() {

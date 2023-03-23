@@ -17,7 +17,7 @@ class HomeView: UIView {
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(cellWithClass: ProductCategoriesCollectionViewCell.self)
-        collectionView.backgroundColor = .profileBackground
+        collectionView.backgroundColor = .mainBackground
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
@@ -30,7 +30,7 @@ class HomeView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(cellWithClass: LatestProductsCollectionViewCell.self)
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .profileBackground
+        collectionView.backgroundColor = .mainBackground
         return collectionView
     }()
 
@@ -41,7 +41,7 @@ class HomeView: UIView {
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(cellWithClass: SaleProductsCollectionViewCell.self)
-        collectionView.backgroundColor = .profileBackground
+        collectionView.backgroundColor = .mainBackground
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
@@ -63,7 +63,7 @@ class HomeView: UIView {
     }
 
     private func setupStyle() {
-        backgroundColor = .profileBackground
+        backgroundColor = .mainBackground
     }
 
     private func addSubviews() {

@@ -59,7 +59,7 @@ class ProfileCell: UITableViewCell {
 
     private func setupStyle() {
         selectionStyle = .none
-        backgroundColor = .profileBackground
+        backgroundColor = .mainBackground
     }
 
     private func addSubviews() {

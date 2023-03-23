@@ -36,7 +36,7 @@ class ProductCategoriesCollectionViewCell: UICollectionViewCell {
     }
 
     private func setupStyle() {
-        backgroundColor = .profileBackground
+        backgroundColor = .mainBackground
     }
 
     private func addSubviews() {

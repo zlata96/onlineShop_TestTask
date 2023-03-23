@@ -7,18 +7,8 @@ class Router {
     static let shared = Router()
 
     func loadInitialScreen() {
-        if !isAppAlreadyLaunchedOnce {
-            let controller = UINavigationController(rootViewController: SignInViewController())
-            setRootViewController(controller: controller)
-        } else {
-            if isUserSignIn {
-                let controller = TabBarController()
-                setRootViewController(controller: controller)
-            } else {
-                let controller = UINavigationController(rootViewController: LogInViewController())
-                setRootViewController(controller: controller)
-            }
-        }
+        let controller = UINavigationController(rootViewController: SignInViewController())
+        setRootViewController(controller: controller)
     }
 
     func setRootViewController(controller: UIViewController, animatedWithOptions: UIView.AnimationOptions? = nil) {
@@ -36,25 +26,5 @@ class Router {
         } else {
             window.rootViewController = controller
         }
-    }
-
-    private var isUserSignIn: Bool {
-        // TODO:
-//        if !UserDefaults.standard.bool(forKey: "hasBeenLaunchedBeforeFlag") {
-//            UserDefaults.standard.set(false, forKey: "hasBeenSignInBeforeFlag")
-//            UserDefaults.standard.synchronize()
-//            return false
-//        }
-        true
-    }
-
-    private var isAppAlreadyLaunchedOnce: Bool {
-        true
-//        if !UserDefaults.standard.bool(forKey: "hasBeenLaunchedBeforeFlag") {
-//            UserDefaults.standard.set(true, forKey: "hasBeenLaunchedBeforeFlag")
-//            UserDefaults.standard.synchronize()
-//            return true
-//        }
-//        return false
     }
 }

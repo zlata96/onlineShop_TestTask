@@ -66,7 +66,7 @@ class LatestProductsCollectionViewCell: UICollectionViewCell {
     }
 
     private func setupStyle() {
-        backgroundColor = .profileBackground
+        backgroundColor = .mainBackground
         contentView.layer.cornerRadius = 16
     }
 
