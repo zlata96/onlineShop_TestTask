@@ -4,7 +4,8 @@
 import UIKit
 
 class SoonViewController: UIViewController {
-    var soonView = SoonView()
+    private var soonView = SoonView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view = soonView

@@ -11,7 +11,6 @@ class HomeViewController: UIViewController {
     private let productsService = ProductsService()
 
     private var productCategories = ProductCategoriesCollectionViewModel.allItems
-
     private var saleProductsData: [SaleProduct] = []
     private var latestProductsData: [LatestDeal] = []
 
@@ -67,8 +66,7 @@ extension HomeViewController: UICollectionViewDataSource {
         case 1: return productCategories.count
         case 2: return latestProductsData.count
         case 3: return saleProductsData.count
-        default:
-            return 1
+        default: return 0
         }
     }
 
