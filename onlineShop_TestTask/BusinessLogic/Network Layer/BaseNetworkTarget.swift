@@ -9,10 +9,6 @@ import Moya
 protocol BaseNetworkTarget: TargetType {}
 
 extension BaseNetworkTarget {
-    var parameterEncoding: ParameterEncoding {
-        JSONEncoding.default
-    }
-
     var headers: [String: String]? {
         ["Content-type": "application/json"]
     }

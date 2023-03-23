@@ -15,8 +15,16 @@ class LogInViewController: UIViewController {
     }
 
     private func addTargets() {
-        logInView.loginButton.button.addTarget(self, action: #selector(logInnButtonPressed), for: .touchUpInside)
-        logInView.haveNoAccountButton.addTarget(self, action: #selector(haveNoAccountButtonPressed), for: .touchUpInside)
+        logInView.loginButton.button.addTarget(
+            self,
+            action: #selector(logInnButtonPressed),
+            for: .touchUpInside
+        )
+        logInView.haveNoAccountButton.addTarget(
+            self,
+            action: #selector(haveNoAccountButtonPressed),
+            for: .touchUpInside
+        )
     }
 
     @objc private func logInnButtonPressed() {
