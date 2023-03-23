@@ -3,10 +3,14 @@
 
 import Moya
 
+// MARK: - ProductsAPI
+
 enum ProductsAPI {
     case getSales
     case getLatestDeals
 }
+
+// MARK: BaseNetworkTarget
 
 extension ProductsAPI: BaseNetworkTarget {
     var path: String {

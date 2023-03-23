@@ -3,6 +3,8 @@
 
 import UIKit
 
+// MARK: - ProductCategoriesCollectionViewCell
+
 class ProductCategoriesCollectionViewCell: UICollectionViewCell {
     private var productCategoryLabel: UILabel = {
         let label = UILabel()
@@ -57,6 +59,8 @@ class ProductCategoriesCollectionViewCell: UICollectionViewCell {
         }
     }
 }
+
+// MARK: Configurable
 
 extension ProductCategoriesCollectionViewCell: Configurable {
     func configure(with viewModel: ProductCategoriesCollectionViewModel) {

@@ -4,11 +4,15 @@
 import SnapKit
 import UIKit
 
+// MARK: - ProfileCellState
+
 enum ProfileCellState {
     case pointer
     case text(value: String)
     case none
 }
+
+// MARK: - ProfileCell
 
 class ProfileCell: UITableViewCell {
     lazy var iconImageView: UIImageView = {
@@ -95,6 +99,8 @@ class ProfileCell: UITableViewCell {
         }
     }
 }
+
+// MARK: Configurable
 
 extension ProfileCell: Configurable {
     func configure(with viewModel: ProfileCellModel) {

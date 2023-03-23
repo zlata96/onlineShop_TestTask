@@ -3,7 +3,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - SaleProducts
 
 struct SaleProducts: Codable {
     let saleProducts: [SaleProduct]
@@ -13,7 +13,7 @@ struct SaleProducts: Codable {
     }
 }
 
-// MARK: - FlashSale
+// MARK: - SaleProduct
 
 struct SaleProduct: Codable {
     let category, name: String

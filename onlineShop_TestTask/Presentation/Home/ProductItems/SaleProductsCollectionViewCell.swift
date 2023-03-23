@@ -4,6 +4,8 @@
 import Kingfisher
 import UIKit
 
+// MARK: - SaleProductsCollectionViewCell
+
 class SaleProductsCollectionViewCell: UICollectionViewCell {
     private var productNameLabel: UILabel = {
         let label = UILabel()
@@ -161,6 +163,8 @@ class SaleProductsCollectionViewCell: UICollectionViewCell {
         }
     }
 }
+
+// MARK: Configurable
 
 extension SaleProductsCollectionViewCell: Configurable {
     func configure(with viewModel: SaleProduct) {

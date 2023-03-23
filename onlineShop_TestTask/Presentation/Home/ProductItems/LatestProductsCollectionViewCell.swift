@@ -3,6 +3,8 @@
 
 import UIKit
 
+// MARK: - LatestProductsCollectionViewCell
+
 class LatestProductsCollectionViewCell: UICollectionViewCell {
     private var productNameLabel: UILabel = {
         let label = UILabel()
@@ -107,6 +109,8 @@ class LatestProductsCollectionViewCell: UICollectionViewCell {
         }
     }
 }
+
+// MARK: Configurable
 
 extension LatestProductsCollectionViewCell: Configurable {
     func configure(with viewModel: LatestDeal) {

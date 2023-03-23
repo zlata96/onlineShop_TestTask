@@ -3,6 +3,8 @@
 
 import UIKit
 
+// MARK: - TabItem
+
 private enum TabItem: CaseIterable {
     case home
     case favorites
@@ -34,6 +36,8 @@ private enum TabItem: CaseIterable {
         }
     }
 }
+
+// MARK: - TabBarController
 
 class TabBarController: UITabBarController {
     override func viewDidLoad() {

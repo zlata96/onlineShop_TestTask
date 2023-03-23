@@ -3,6 +3,8 @@
 
 import UIKit
 
+// MARK: - ProfileViewController
+
 class ProfileViewController: UIViewController {
     private var profileView = ProfileView()
     private var profileItems = ProfileCellModel.allItems

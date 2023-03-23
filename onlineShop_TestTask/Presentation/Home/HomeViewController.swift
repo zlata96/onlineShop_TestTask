@@ -3,6 +3,8 @@
 
 import UIKit
 
+// MARK: - HomeViewController
+
 class HomeViewController: UIViewController {
     private var homeView = HomeView()
 
@@ -57,6 +59,8 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: UICollectionViewDataSource
+
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         switch collectionView.tag {
@@ -97,7 +101,11 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: UICollectionViewDelegate
+
 extension HomeViewController: UICollectionViewDelegate {}
+
+// MARK: UICollectionViewDelegateFlowLayout
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
