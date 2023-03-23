@@ -21,8 +21,7 @@ class SignInViewController: UIViewController {
 
     @objc
     private func alreadyLoginButtonPressed() {
-        let logInnViewController = NavigationController(rootViewController: LogInViewController())
-        present(logInnViewController, animated: true)
+        router.setRootViewController(controller: LogInViewController())
     }
 
     @objc
